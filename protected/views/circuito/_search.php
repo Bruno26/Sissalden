@@ -1,18 +1,30 @@
-<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
+<?php
+/* @var $this CircuitoController */
+/* @var $model Circuito */
+/* @var $form CActiveForm */
+?>
+
+<div class="wide form">
+
+<?php $form=$this->beginWidget('CActiveForm', array(
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
 
-	<?php echo $form->textFieldRow($model,'id_circuito',array('class'=>'span5')); ?>
+	<div class="row">
+		<?php echo $form->label($model,'id_circuito'); ?>
+		<?php echo $form->textField($model,'id_circuito'); ?>
+	</div>
 
-	<?php echo $form->textFieldRow($model,'nb_circuito',array('class'=>'span5','maxlength'=>80)); ?>
+	<div class="row">
+		<?php echo $form->label($model,'nb_circuito'); ?>
+		<?php echo $form->textField($model,'nb_circuito',array('size'=>60,'maxlength'=>80)); ?>
+	</div>
 
-	<div class="form-actions">
-		<?php $this->widget('bootstrap.widgets.TbButton', array(
-			'buttonType' => 'submit',
-			'type'=>'primary',
-			'label'=>'Search',
-		)); ?>
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Search'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
+
+</div><!-- search-form -->

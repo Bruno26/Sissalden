@@ -29,12 +29,12 @@
 
 	<?php echo $form->dropDownListRow($model,'status_promotor',array(''=>'Seleccione...','A'=> 'Activo','D'=> 'Inactivo')); ?>
 
-	<?php echo $form->textFieldRow($model,'nb_bd_usuario',array('class'=>'span5','maxlength'=>50)); ?>
+	<?php //echo $form->textFieldRow($model,'nb_bd_usuario',array('class'=>'span5','maxlength'=>50)); ?>
 	
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>$model->isNewRecord ? 'Registrar' : 'Save',
+			'label'=>$model->isNewRecord ? 'Registrar' : 'Registrar',
 		)); ?>
 	</div>
 

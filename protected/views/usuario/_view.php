@@ -33,6 +33,18 @@
 	<?php echo CHtml::encode($data->nu_telefono); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('last_login')); ?>:</b>
+	<?php echo CHtml::encode($data->last_login); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('create_at')); ?>:</b>
+	<?php echo CHtml::encode($data->create_at); ?>
+	<br />
+
 	*/ ?>
 
 </div>

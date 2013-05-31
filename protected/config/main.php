@@ -86,19 +86,19 @@ return array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
-				),
+				     ),
 				// uncomment the following to show log messages on web pages
 				/*
 				array(
 					'class'=>'CWebLogRoute',
 				),
 				*/
-			),
-		),
-		'bootstrap' => array(
-	    'class' => 'ext.bootstrap.components.Bootstrap',
-	    'responsiveCss' => true,
-	),
+				       ),
+			    ),
+				'bootstrap' => array(
+			    	'class' => 'ext.bootstrap.components.Bootstrap',
+			    	'responsiveCss' => true,
+					),
 
 	),
 

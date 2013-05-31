@@ -53,6 +53,7 @@ class Parroquia extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'circuito' => array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
 		);
 	}
 
@@ -78,10 +79,11 @@ class Parroquia extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
 		$criteria->compare('id_parroquia',$this->id_parroquia);
 		$criteria->compare('nb_parroquia',$this->nb_parroquia,true);
 		$criteria->compare('id_circuito',$this->id_circuito);
+		$criteria->with = array('circuito');
+		$criteria->addSearchCondition('circuito.nb_circuido', $this->id_circuito);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

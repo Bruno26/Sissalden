@@ -8,20 +8,14 @@ $this->menu=array(
 	array('label'=>'Manage Acta','url'=>array('admin')),
 );*/
 
-    $this->widget('bootstrap.widgets.TbMenu', array(
-'type'=>'list',
-'items' => array(
-array('label'=>'List header', 'itemOptions'=>array('class'=>'nav-header')),
-//array('label'=>'Home', 'url'=>'#', 'itemOptions'=>array('class'=>'active')),
-array('label'=>'Library', 'url'=>'#'),
-array('label'=>'Applications', 'url'=>'#'),
-array('label'=>'Another list header', 'itemOptions'=>array('class'=>'nav-header')),
-array('label'=>'Profile', 'url'=>'#'),
-array('label'=>'Settings', 'url'=>'#'),
-'',
-array('label'=>'Help', 'url'=>'#'),
-)
-));
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type' => 'tabs',
+	'tabs' => array(
+
+			array('label'=>'Registrar Acta','url'=>array('create')),
+			array('label'=>'Consultar Acta','url'=>array('admin')),
+			))
+	);
 
 ?>
 

@@ -2,23 +2,20 @@
 $this->breadcrumbs=array(
 	'Usuarios',
 );
-
-/*Lineas comentadas del menu por defecto que trae yii*/
+/*
 $this->menu=array(
-	array('label'=>'Create Usuario','url'=>array('create')),       
+	array('label'=>'Create Usuario','url'=>array('create')),
 	array('label'=>'Manage Usuario','url'=>array('admin')),
-);
-/*Lineas comentadas del menu por defecto que trae yii*/
+);*/
 
-/*$this->widget('bootstrap.widgets.TbTabs', array(
+$this->widget('bootstrap.widgets.TbTabs', array(
 	'type'=>'tabs', // 'tabs' or 'pills'
 	'tabs'=>array(
-		array('label'=>'Create Usuario','url'=>array('create')),
-		array('label'=>'Manage Usuario','url'=>array('admin')),
+	array('label'=>'Crear Usuario','url'=>array('create')),
+	array('label'=>'Conusltar Usuario','url'=>array('admin')),
 	),
 ));
 
-*/
 ?>
 
 <h1>Usuarios</h1>

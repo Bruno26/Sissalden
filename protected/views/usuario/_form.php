@@ -1,5 +1,6 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'usuario-form',
+	'type'=>'horizontal',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -17,15 +18,21 @@
 
 	<?php echo $form->checkBoxRow($model,'st_usuario'); ?>
 
-	<?php echo $form->textFieldRow($model,'in_tipo_usuario',array('class'=>'span5','maxlength'=>2)); ?>
+	<?php echo $form->dropDownListRow($model, 'in_tipo_usuario',array(' '=>'Seleccione...', 'S1'=>'Supervisor de Actas', 'S2'=>'Supervisor de Vectores', 'D'=>'Director', 'C'=>'Coordinador')); ?>	
 
 	<?php echo $form->textFieldRow($model,'nu_telefono',array('class'=>'span5','maxlength'=>11)); ?>
+
+	<?php echo $form->passwordFieldRow($model,'password',array('class'=>'span5','maxlength'=>128)); ?>
+
+	<?php //echo $form->textFieldRow($model,'last_login',array('class'=>'span5')); ?>
+
+	<?php //echo $form->textFieldRow($model,'create_at',array('class'=>'span5')); ?>
 
 	<div class="form-actions">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>$model->isNewRecord ? 'Create' : 'Save',
+			'label'=>$model->isNewRecord ? 'Registrar' : 'Registrar',
 		)); ?>
 	</div>
 

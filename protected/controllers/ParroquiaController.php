@@ -36,7 +36,7 @@ class ParroquiaController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -45,21 +45,42 @@ class ParroquiaController extends Controller
 	}
 
 	/**
+	 * Lists all models.
+	 */
+	public function actionIndex()
+	{
+		$dataProvider=new CActiveDataProvider('Parroquia');
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+
+	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+/* Funtion del actionView yii
+	public function actionView($id_circuito, $id_parroquia)
 	{
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$this->loadModel($id_circuito, $id_parroquia),
 		));
+	}
+
+*/
+//Adaptacio de actioView con claves compuestas primaria
+	public function actionView($id_circuito, $id_parroquia)
+	{
+		$model=$this->loadModel($id_circuito, $id_parroquia);
+		$this->render('view',array('model'=>$model));
 	}
 
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+
+/*	public function actionCreate()
 	{
 		$model=new Parroquia;
 
@@ -70,12 +91,28 @@ class ParroquiaController extends Controller
 		{
 			$model->attributes=$_POST['Parroquia'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->Array));
+				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_cricuito'=>$model->id_circuito));
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
 		));
+	}*/
+
+	public function actionCreate()
+	{
+		$model=new Parroquia;
+
+		if(isset($_POST['Parroquia']))
+		{
+			$model->attributes=$_POST['Parroquia'];
+			if($model->validate())
+			{
+				$this->saveModel($model);
+				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_circuito'=>$model->id_circuito));
+			}
+		}
+		$this->render('create',array('model'=>$model));
 	}
 
 	/**
@@ -83,6 +120,7 @@ class ParroquiaController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
+			/*/* Funtion del actionUpdate yii
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
@@ -100,6 +138,79 @@ class ParroquiaController extends Controller
 		$this->render('update',array(
 			'model'=>$model,
 		));
+	}
+*/
+
+//Adaptacion composite primarykey Update Bruno
+
+	public function actionUpdate($id_circuito, $id_parroquia)
+	{
+		$model=$this->loadModel($id_circuito, $id_parroquia);
+
+		if(isset($_POST['Parroquia']))
+			{
+				$model->attributes=$_POST['Parroquia'];
+				$this->saveModel($model);
+				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_circuito'=>$model->id_circuito));
+			}
+		$this->render('update',array('model'=>$model,));
+	}
+
+
+	/**
+	 * Manages all models.
+	 */
+	public function actionAdmin()
+	{
+		$model=new Parroquia('search');
+		$model->unsetAttributes();  // clear any default values
+		if(isset($_GET['Parroquia']))
+			$model->attributes=$_GET['Parroquia'];
+
+		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadModel($id_circuito, $id_parroquia)
+	{
+		$model=Parroquia::model()->findByPk(array('id_parroquia'=>$id_circuito, 'id_circuito'=>$id_parroquia));
+		if($model===null)
+			throw new CHttpException( 404,'The requested page does not existe.');
+		return $model;
+	}
+	
+	public function saveModel($model)
+	{
+		try
+		{
+			$model->save();
+		}
+		catch(Exception $e)
+		{
+			//$this->showError($e);
+		}
+	}
+
+
+
+
+	/**
+	 * Performs the AJAX validation.
+	 * @param CModel the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='parroquia-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
 	}
 
 	/**
@@ -122,55 +233,6 @@ class ParroquiaController extends Controller
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
 
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Parroquia');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
 
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
-		$model=new Parroquia('search');
-		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Parroquia']))
-			$model->attributes=$_GET['Parroquia'];
-
-		$this->render('admin',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
-	 */
-	public function loadModel($id)
-	{
-		$model=Parroquia::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
-		return $model;
-	}
-
-	/**
-	 * Performs the AJAX validation.
-	 * @param CModel the model to be validated
-	 */
-	protected function performAjaxValidation($model)
-	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='parroquia-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-	}
+	
 }

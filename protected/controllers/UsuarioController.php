@@ -26,17 +26,20 @@ class UsuarioController extends Controller
 	public function accessRules()
 	{
 		return array(
+//	$admin = (isset(Yii::app()->user->st_usuario) and Yii::app()->user->st_usuario == 'S1') ? true : false ;// ejemplo que pongo para crear y validar parfiles
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update','delete'),
+				'users'=>array('@'),
+
+			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'actions'=>array('admin'),
+				'users'=>array('@'),
+				
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -69,6 +72,7 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+			$model->password=md5($model->password); 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->nb_bd_usuario));
 		}
@@ -93,6 +97,7 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+			$model->password=md5($model->password); 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->nb_bd_usuario));
 		}

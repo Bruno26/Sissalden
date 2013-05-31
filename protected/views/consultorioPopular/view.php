@@ -3,7 +3,7 @@ $this->breadcrumbs=array(
 	'Consultorio Populars'=>array('index'),
 	$model->id_consul_popular,
 );
-
+/*
 $this->menu=array(
 	array('label'=>'List ConsultorioPopular','url'=>array('index')),
 	array('label'=>'Create ConsultorioPopular','url'=>array('create')),
@@ -11,9 +11,20 @@ $this->menu=array(
 	array('label'=>'Delete ConsultorioPopular','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->Array),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage ConsultorioPopular','url'=>array('admin')),
 );
+*/
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type' => 'tabs',
+	'tabs' => array(
+			array('label'=>'Listar','url'=>array('index')),
+			array('label'=>'Registrar','url'=>array('create')),
+			array('label'=>'Modificar','url'=>array('update','id'=>$model->Array)),
+			//array('label'=>'Delete ConsultorioPopular','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->Array),'confirm'=>'Are you sure you want to delete this item?')),
+			array('label'=>'Consultar','url'=>array('admin')),			
+		))
+	);
 ?>
 
-<h1>View ConsultorioPopular #<?php echo $model->Array; ?></h1>
+<h1>Ver Consultorio Popular <?php echo $model->Array; ?></h1>
 
 <?php $this->widget('bootstrap.widgets.TbDetailView',array(
 	'data'=>$model,

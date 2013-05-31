@@ -8,8 +8,8 @@
 	<?php echo CHtml::encode($data->nb_asic); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id_registro')); ?>:</b>
-	<?php echo CHtml::encode($data->id_registro); ?>
+	<b><?php// echo CHtml::encode($data->getAttributeLabel('id_registro')); ?>:</b>
+	<?php //echo CHtml::encode($data->id_registro); ?>
 	<br />
 
 

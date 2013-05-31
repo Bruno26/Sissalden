@@ -3,7 +3,7 @@ $this->breadcrumbs=array(
 	'Asics'=>array('index'),
 	$model->id_asic,
 );
-
+/*
 $this->menu=array(
 	array('label'=>'List Asic','url'=>array('index')),
 	array('label'=>'Create Asic','url'=>array('create')),
@@ -11,6 +11,17 @@ $this->menu=array(
 	array('label'=>'Delete Asic','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->Array),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Asic','url'=>array('admin')),
 );
+*/
+$this->widget('bootstrap.widgets.TbTabs', array(
+	'type' => 'tabs',
+	'tabs' => array(
+			array('label'=>'Listar Asic','url'=>array('index')),
+			array('label'=>'Registrar Asic','url'=>array('create')),
+			array('label'=>'Modificar Asic','url'=>array('update','id'=>$model->Array)),
+			//array('label'=>'Delete Asic','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->Array),'confirm'=>'Are you sure you want to delete this item?')),
+			array('label'=>'Consultar Asic','url'=>array('admin')),
+			))
+	);
 ?>
 
 <h1>View Asic #<?php echo $model->Array; ?></h1>

@@ -32,13 +32,31 @@
 	</div><!-- header -->
 
 	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
+		<?php 
+	$global = (isset(Yii::app()->user->in_tipo_usuario) and Yii::app()->user->in_tipo_usuario == 'D' || 'C' || 'S1' || 'S2') ? true : false ;				
+	$admi = (isset(Yii::app()->user->in_tipo_usuario) and Yii::app()->user->in_tipo_usuario == 'A') ? true : false ;			
+	$S1 = (isset(Yii::app()->user->in_tipo_usuario) and Yii::app()->user->in_tipo_usuario == 'S1') ? true : false ;
+	$S2 = (isset(Yii::app()->user->in_tipo_usuario) and Yii::app()->user->in_tipo_usuario == 'S2') ? true : false ;
+	$C = (isset(Yii::app()->user->in_tipo_usuario) and Yii::app()->user->in_tipo_usuario == 'C') ? true : false ;
+	$D = (isset(Yii::app()->user->in_tipo_usuario) and Yii::app()->user->in_tipo_usuario == 'D') ? true : false ;
+	$this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				//array('label'=>'Inicio', 'url'=>array('/site/index')),
+				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Usuario', 'url'=>array('/usuario/index'), 'visible' => $admi),
+				array('label'=>'Acta', 'url'=>array('/acta/index'), 'visible' => $S1   ),
+				array('label'=>'Informe', 'url'=>array('/informe/index')),
+				array('label'=>'Asignar Consultorio', 'url'=>array('/consultorioPromotores/index'), 'visible' => $C),
+				array('label'=>'Vectores', 'url'=>array('/csaxcsa/index'), 'visible'=> $S2),
+				array('label'=>'Consultorio Popular', 'url'=>array('/consultorioPopular/index'), 'visible' => $C),
+		array('label'=>'Parroquia', 'url'=>array('/Parroquia/index'), 'visible' => $C),
+				array('label'=>'Asic', 'url'=>array('/asic/index'), 'visible' => $C),
+				array('label'=>'Sub Actividades', 'url'=>array('/subActividades/index'), 'visible' => $C),
+				array('label'=>'Actividades', 'url'=>array('/actividades/index'), 'visible' => $C),
+				array('label'=>'Promotor', 'url'=>array('/promotores/index'), 'visible' => $global),
+				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Sesión ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->

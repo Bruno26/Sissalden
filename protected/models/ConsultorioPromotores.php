@@ -54,6 +54,11 @@ class ConsultorioPromotores extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'circuito'=>array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
+			'parrqouia'=>array(self::BELONGS_TO, 'Parrqouia', 'id_parrqouia'),
+			'asic'=>array(self::BELONGS_TO, 'Asic', 'id_asic'),
+			'promotores'=>array(self::BELONGS_TO, 'Promotores', 'id_promotor'),
+			'consultorio'=>array(self::BELONGS_TO, 'ConsultorioPopular', 'id_consul_popular'),
 		);
 	}
 

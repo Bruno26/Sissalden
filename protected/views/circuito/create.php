@@ -1,12 +1,15 @@
 <?php
+/* @var $this CircuitoController */
+/* @var $model Circuito */
+
 $this->breadcrumbs=array(
 	'Circuitos'=>array('index'),
 	'Create',
 );
 
 $this->menu=array(
-	array('label'=>'List Circuito','url'=>array('index')),
-	array('label'=>'Manage Circuito','url'=>array('admin')),
+	array('label'=>'List Circuito', 'url'=>array('index')),
+	array('label'=>'Manage Circuito', 'url'=>array('admin')),
 );
 ?>
 

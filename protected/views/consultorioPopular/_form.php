@@ -1,15 +1,16 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'consultorio-popular-form',
+	'type'=>'horizontal',
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Campos con <span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<?php echo $form->textFieldRow($model,'nb_consul_popular',array('class'=>'span5','maxlength'=>80)); ?>
 
-	<?php echo $form->textAreaRow($model,'dir_consu_popular',array('rows'=>6, 'cols'=>50, 'class'=>'span8')); ?>
+	<?php echo $form->textAreaRow($model,'dir_consu_popular',array('rows'=>6, 'cols'=>50, 'class'=>'span5')); ?>
 
 	<?php echo $form->textFieldRow($model,'nb_comite_salud',array('class'=>'span5','maxlength'=>50)); ?>
 
@@ -29,7 +30,7 @@
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>$model->isNewRecord ? 'Create' : 'Save',
+			'label'=>$model->isNewRecord ? 'Registrar' : 'Registrar',
 		)); ?>
 	</div>
 

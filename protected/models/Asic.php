@@ -57,6 +57,13 @@ class Asic extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'circuito'=> array(self::BELONGS_TO, 'Parrqouia', 'id_circuito'),
+			'parroquia'=>array(self::BELONGS_TO, 'Parroquia', 'id_parrqouia'),
+				'circuitoC'=>array(self::HAS_MANY, 'ConsultorioPopular', 'id_circuito'),
+				'parroquiaC'=>array(self::HAS_MANY, 'ConsultorioPopular', 'id_parroquia'),
+				'asicC'=>array(self::HAS_MANY, 'ConsultorioPopular', 'id_asic'),				
+			
+
 		);
 	}
 

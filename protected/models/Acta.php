@@ -75,19 +75,19 @@ class Acta extends CActiveRecord
 	{
 		return array(
 			'id_acta' => 'Id Acta',
-			'tma_acta' => 'Tma Acta',
-			'nb_actividades' => 'Nb Actividades',
-			'nb_sub_actividades' => 'Nb Sub Actividades',
-			'fch_acta' => 'Fch Acta',
-			'cant_participantes' => 'Cant Participantes',
+			'tma_acta' => 'Tema ',
+			'nb_actividades' => 'Actividades',
+			'nb_sub_actividades' => 'Sub Actividades',
+			'fch_acta' => 'Fecha ',
+			'cant_participantes' => 'Cantidad de Participantes',
 			'id_registro' => 'Id Registro',
-			'id_consul_popular' => 'Id Consul Popular',
-			'id_asic' => 'Id Asic',
-			'id_parroquia' => 'Id Parroquia',
-			'id_circuito' => 'Id Circuito',
+			'id_consul_popular' => 'Consultorio Popular',
+			'id_asic' => 'Asic',
+			'id_parroquia' => 'Parroquia',
+			'id_circuito' => 'Circuito',
 			'id_actividades' => 'Id Actividades',
-			'id_promotor' => 'Id Promotor',
-			'nb_bd_usuario' => 'Nb Bd Usuario',
+			'id_promotor' => 'Promotor',
+			'nb_bd_usuario' => 'Login',
 		);
 	}
 

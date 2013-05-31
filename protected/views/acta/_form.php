@@ -1,9 +1,10 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'acta-form',
+	'type'=>'horizontal',
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="help-block">Fields with <span class="required">*</span> are required.</p>
+	<p class="help-block">Los campos con <span class="required">*</span> son requeridos.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
@@ -13,17 +14,19 @@
 
 	<?php echo $form->textFieldRow($model,'nb_sub_actividades',array('class'=>'span5','maxlength'=>50)); ?>
 
-	<?php echo $form->textFieldRow($model,'fch_acta',array('class'=>'span5')); ?>
+	<?php //echo $form->textFieldRow($model,'fch_acta',array('class'=>'span5')); ?>
+
+	 <?php echo $form->datepickerRow($model, 'fch_acta',array('hint'=>'Haga clic en el interior! Este es un campo de fecha.','prepend'=>'<i class="icon-calendar"></i>')); ?>
 
 	<?php echo $form->textFieldRow($model,'cant_participantes',array('class'=>'span5','maxlength'=>3)); ?>
 
 	<?php echo $form->textFieldRow($model,'id_consul_popular',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'id_asic',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($model,'id_circuito',array('class'=>'span5')); ?>
 
 	<?php echo $form->textFieldRow($model,'id_parroquia',array('class'=>'span5')); ?>
 
-	<?php echo $form->textFieldRow($model,'id_circuito',array('class'=>'span5')); ?>
+	<?php echo $form->textFieldRow($model,'id_asic',array('class'=>'span5')); ?>
 
 	<?php echo $form->textFieldRow($model,'id_actividades',array('class'=>'span5')); ?>
 
@@ -35,7 +38,7 @@
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
 			'buttonType'=>'submit',
 			'type'=>'primary',
-			'label'=>$model->isNewRecord ? 'Create' : 'Save',
+			'label'=>$model->isNewRecord ? 'Registrar' : 'Registrar',
 		)); ?>
 	</div>
 

@@ -12,6 +12,9 @@
  * @property boolean $st_usuario
  * @property string $in_tipo_usuario
  * @property string $nu_telefono
+ * @property string $password
+ * @property string $last_login
+ * @property string $create_at
  */
 class Usuario extends CActiveRecord
 {
@@ -41,16 +44,18 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nb_usuario, nu_cedula_usuario, nacio_usuario, nb_bd_usuario, nu_telefono', 'required'),
+			array('nb_usuario, nu_cedula_usuario, nacio_usuario, nb_bd_usuario, nu_telefono, password', 'required'),
 			array('nb_usuario', 'length', 'max'=>80),
 			array('nu_cedula_usuario', 'length', 'max'=>8),
-			array('nacio_usuario, in_tipo_usuario', 'length', 'max'=>2),
+			array('nacio_usuario', 'length', 'max'=>1),
 			array('nb_bd_usuario', 'length', 'max'=>50),
+			array('in_tipo_usuario', 'length', 'max'=>2),
 			array('nu_telefono', 'length', 'max'=>11),
-			array('st_usuario', 'safe'),
+			array('password', 'length', 'max'=>128),
+			array('st_usuario, last_login, create_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('nb_usuario, nu_cedula_usuario, nacio_usuario, nb_bd_usuario, id_registro, st_usuario, in_tipo_usuario, nu_telefono', 'safe', 'on'=>'search'),
+			array('nb_usuario, nu_cedula_usuario, nacio_usuario, nb_bd_usuario, id_registro, st_usuario, in_tipo_usuario, nu_telefono, password, last_login, create_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,16 +77,26 @@ class Usuario extends CActiveRecord
 	{
 		return array(
 			'nb_usuario' => 'Nombre',
-			'nu_cedula_usuario' => 'Nu Cedula Usuario',
-			'nacio_usuario' => 'Nacio Usuario',
-			'nb_bd_usuario' => 'login', // logn == nb_bd_usuario 
+			'nu_cedula_usuario' => 'Cédula',
+			'nacio_usuario' => 'Nacionalidad',
+			'nb_bd_usuario' => 'Login',
 			'id_registro' => 'Id Registro',
-			'st_usuario' => 'St Usuario',
-			'in_tipo_usuario' => 'In Tipo Usuario',
-			'nu_telefono' => 'Nu Telefono',
+			'st_usuario' => 'Estatus',
+			'in_tipo_usuario' => 'Tipo',
+			'nu_telefono' => 'Telefono',
+			'password' => 'Password',
+			'last_login' => 'Last Login',
+			'create_at' => 'Create At',
 		);
 	}
 
+	public function validatePassword($password){
+	return $this->hashPassword($password)===$this->password;
+	}
+
+	public function hashPassword($password){
+	return md5($password);
+	}
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
@@ -101,6 +116,9 @@ class Usuario extends CActiveRecord
 		$criteria->compare('st_usuario',$this->st_usuario);
 		$criteria->compare('in_tipo_usuario',$this->in_tipo_usuario,true);
 		$criteria->compare('nu_telefono',$this->nu_telefono,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('last_login',$this->last_login,true);
+		$criteria->compare('create_at',$this->create_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
