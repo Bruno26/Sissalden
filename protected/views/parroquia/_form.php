@@ -6,7 +6,7 @@
 
 	<p class="help-block">Campos con <span class="required">*</span> son requeridos.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php //echo $form->errorSummary($model); ?>
 
 	<?php echo $form->dropDownListRow($model,'id_circuito', CHtml::listData(Circuito::model()->findAll(), 'id_circuito', 'nb_circuito'));//linea que ve el nombre de circuito de la tabla Circuito ?>	
 	

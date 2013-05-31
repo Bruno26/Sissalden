@@ -35,7 +35,11 @@ $('.search-form form').submit(function(){
 <h1>Consultar Parroquias</h1>
 
 
-
+<?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
+<div class="search-form" style="display:none">
+<?php $this->renderPartial('_search',array(
+	'model'=>$model,
+)); ?>
 </div><!-- search-form -->
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
@@ -50,6 +54,4 @@ $('.search-form form').submit(function(){
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
-));
-
- ?>
+)); ?>

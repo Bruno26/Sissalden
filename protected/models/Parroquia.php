@@ -28,6 +28,11 @@ class Parroquia extends CActiveRecord
 		return 'sissalden.parroquia';
 	}
 
+	public function primaryKey()
+	{	
+		return array('id_circuito','id_parroquia');
+	}
+
 	/**
 	 * @return array validation rules for model attributes.
 	 */
@@ -63,9 +68,9 @@ class Parroquia extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_parroquia' => 'Id Parroquia',
-			'nb_parroquia' => 'Nb Parroquia',
-			'id_circuito' => 'Id Circuito',
+			'id_parroquia' => 'Parroquia',
+			'nb_parroquia' => 'Nombre de Parroquia',
+			'id_circuito' => 'Nombre del Circuito',
 		);
 	}
 
@@ -81,7 +86,7 @@ class Parroquia extends CActiveRecord
 		$criteria=new CDbCriteria;
 		$criteria->compare('id_parroquia',$this->id_parroquia);
 		$criteria->compare('nb_parroquia',$this->nb_parroquia,true);
-		$criteria->compare('id_circuito',$this->id_circuito);
+///		$criteria->compare('id_circuito',$this->id_circuito);
 		$criteria->with = array('circuito');
 		$criteria->addSearchCondition('circuito.nb_circuido', $this->id_circuito);
 

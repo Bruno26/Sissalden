@@ -18,6 +18,6 @@ $this->widget('bootstrap.widgets.TbTabs', array(
 ));
 ?>
 
-<h1>Crar Parroquia</h1>
+<h1>Crear Parroquia</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

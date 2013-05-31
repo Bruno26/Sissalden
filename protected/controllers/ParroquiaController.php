@@ -55,19 +55,7 @@ class ParroquiaController extends Controller
 		));
 	}
 
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-/* Funtion del actionView yii
-	public function actionView($id_circuito, $id_parroquia)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id_circuito, $id_parroquia),
-		));
-	}
 
-*/
 //Adaptacio de actioView con claves compuestas primaria
 	public function actionView($id_circuito, $id_parroquia)
 	{
@@ -75,30 +63,8 @@ class ParroquiaController extends Controller
 		$this->render('view',array('model'=>$model));
 	}
 
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
 
-/*	public function actionCreate()
-	{
-		$model=new Parroquia;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Parroquia']))
-		{
-			$model->attributes=$_POST['Parroquia'];
-			if($model->save())
-				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_cricuito'=>$model->id_circuito));
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}*/
-
+//Function actionCreate con conposite primaryKey
 	public function actionCreate()
 	{
 		$model=new Parroquia;
@@ -115,31 +81,7 @@ class ParroquiaController extends Controller
 		$this->render('create',array('model'=>$model));
 	}
 
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-			/*/* Funtion del actionUpdate yii
-	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Parroquia']))
-		{
-			$model->attributes=$_POST['Parroquia'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->Array));
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-*/
+	
 
 //Adaptacion composite primarykey Update Bruno
 
@@ -180,37 +122,14 @@ class ParroquiaController extends Controller
 	public function loadModel($id_circuito, $id_parroquia)
 	{
 		$model=Parroquia::model()->findByPk(array('id_parroquia'=>$id_circuito, 'id_circuito'=>$id_parroquia));
-		if($model===null)
-			throw new CHttpException( 404,'The requested page does not existe.');
+		
 		return $model;
 	}
 	
 	public function saveModel($model)
 	{
-		try
-		{
 			$model->save();
-		}
-		catch(Exception $e)
-		{
-			//$this->showError($e);
-		}
-	}
-
-
-
-
-	/**
-	 * Performs the AJAX validation.
-	 * @param CModel the model to be validated
-	 */
-	protected function performAjaxValidation($model)
-	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='parroquia-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+		
 	}
 
 	/**
@@ -232,7 +151,18 @@ class ParroquiaController extends Controller
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
 	}
-
+	/**
+	 * Performs the AJAX validation.
+	 * @param CModel the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{
+		if(isset($_POST['ajax']) && $_POST['ajax']==='parroquia-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+	}
 
 	
 }
