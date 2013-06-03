@@ -1,7 +1,7 @@
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
 	'id'=>'parroquia-form',
 	'type'=>'horizontal',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
 )); ?>
 
 	<p class="help-block">Campos con <span class="required">*</span> son requeridos.</p>

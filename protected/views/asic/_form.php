@@ -8,9 +8,9 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<?php echo $form->textFieldRow($model,'id_circuito',array('class'=>'span5')); ?>
+	<?php echo $form->dropDownListRow($model,'id_circuito', CHtml::listData(Circuito::model()->findAll(), 'id_circuito', 'nb_circuito'));//linea que?>
 
-	<?php echo $form->textFieldRow($model,'id_parroquia',array('class'=>'span5')); ?>
+	<?php echo $form->dropDownListRow($model,'id_parroquia', CHtml::listData(Parroquia::model()->findAll(), 'id_parroquia', 'nb_parroquia'));//linea que?>
 
 	<?php echo $form->textFieldRow($model,'nb_asic',array('class'=>'span5','maxlength'=>80)); ?>
 

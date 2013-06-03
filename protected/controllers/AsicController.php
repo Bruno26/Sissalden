@@ -61,23 +61,25 @@ class AsicController extends Controller
 	 */
 	public function actionCreate()
 	{
+		
 		$model=new Asic;
-
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Asic']))
 		{
 			$model->attributes=$_POST['Asic'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->Array));
+			if($model->validate())
+			{
+				$this->saveModel($model);
+				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_circuito'=>$model->id_circuito, 'id_asic'=>$model->id_asic));
+			}
 		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
+		$this->render('create',array('model'=>$model));
 	}
 
+	public function saveModel($model)
+	{
+		$model->save();
+	}
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

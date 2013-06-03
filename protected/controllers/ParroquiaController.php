@@ -64,7 +64,7 @@ class ParroquiaController extends Controller
 	}
 
 
-//Function actionCreate con conposite primaryKey
+//Function actionCreate con conposite 
 	public function actionCreate()
 	{
 		$model=new Parroquia;
@@ -81,7 +81,31 @@ class ParroquiaController extends Controller
 		$this->render('create',array('model'=>$model));
 	}
 
-	
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+			/*/* Funtion del actionUpdate yii
+	public function actionUpdate($id)
+	{
+		$model=$this->loadModel($id);
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Parroquia']))
+		{
+			$model->attributes=$_POST['Parroquia'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->Array));
+		}
+
+		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+*/
 
 //Adaptacion composite primarykey Update Bruno
 
@@ -122,15 +146,15 @@ class ParroquiaController extends Controller
 	public function loadModel($id_circuito, $id_parroquia)
 	{
 		$model=Parroquia::model()->findByPk(array('id_parroquia'=>$id_circuito, 'id_circuito'=>$id_parroquia));
-		
+		if($model===null)
+			throw new CHttpException( 404,'La solicitud de la página no existe.');
 		return $model;
 	}
 	
 	public function saveModel($model)
 	{
 			$model->save();
-		
-	}
+	}	
 
 	/**
 	 * Deletes a particular model.

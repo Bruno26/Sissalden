@@ -45,12 +45,14 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id_asic',
+		//'id_asic',
+
+		//'id_registro',
+		//'id_parroquia',
+		array ('name'=>'id_circuito','value'=>'$data->circuito->nb_circuito','type'=>'text',),
+		array ('name'=>'id_parroquia','value'=>'$data->parroquia->nb_parroquia','type'=>'text',),
+		//'nb_bd_usuario',
 		'nb_asic',
-		'id_registro',
-		'id_parroquia',
-		'nb_bd_usuario',
-		'id_circuito',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
