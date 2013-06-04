@@ -70,7 +70,7 @@ class ActividadesController extends Controller
 		{
 			$model->attributes=$_POST['Actividades'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->Array));
+				$this->redirect(array('admin'));
 		}
 
 		$this->render('create',array(

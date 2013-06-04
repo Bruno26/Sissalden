@@ -926,3 +926,1162 @@ Stack trace:
 REQUEST_URI=/Sissalden/index.php?r=parroquia%2Fadmin&Parroquia%5Bid_circuito%5D=Circuito+2&Parroquia%5Bnb_parroquia%5D=&Parroquia_page=1&ajax=parroquia-grid
 HTTP_REFERER=http://localhost/Sissalden/index.php?r=parroquia/admin
 ---
+2013/06/03 16:15:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/view')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sissalden/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/view&id_asic=10&id_circuito=2&id_parroquia=2
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/index
+---
+2013/06/04 09:14:23 [error] [exception.CException] exception 'CException' with message 'Propiedad "Actividades"."Array" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('Array')
+#1 /var/www/Sissalden/protected/controllers/ActividadesController.php(73): CActiveRecord->__get('Array')
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ActividadesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/cre...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sissalden/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/create
+---
+2013/06/04 09:14:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/vie...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sissalden/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/view&id%5Bnb_bd_usuario%5D=postgres&id%5Bid_actividades%5D=1
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/admin
+---
+2013/06/04 09:31:26 [error] [exception.CException] exception 'CException' with message 'La propiedad "dataProvider" no puede estar vacia.' in /var/www/yii/framework/zii/widgets/CBaseListView.php:105
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#1 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#2 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#3 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#4 /var/www/Sissalden/protected/views/actividades/admin.php(56): CBaseController->widget('bootstrap.widge...', Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#9 /var/www/Sissalden/protected/controllers/ActividadesController.php(148): CController->render('admin', Array)
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(49): ActividadesController->actionAdmin()
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/adm...')
+#21 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /var/www/Sissalden/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/admin
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/create
+---
+2013/06/04 09:33:02 [error] [exception.CException] exception 'CException' with message 'Propiedad "Actividades"."Array" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('Array')
+#1 /var/www/Sissalden/protected/views/actividades/_view.php(4): CActiveRecord->__get('Array')
+#2 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, false)
+#4 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sissal...', Array)
+#5 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#9 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/Sissalden/protected/views/actividades/index.php(25): CBaseController->widget('bootstrap.widge...', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/Sissalden/protected/controllers/ActividadesController.php(133): CController->render('index', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): ActividadesController->actionIndex()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/ind...')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sissalden/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/index
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/admin
+---
+2013/06/04 09:33:31 [error] [exception.CException] exception 'CException' with message 'Propiedad "Actividades"."Array" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('Array')
+#1 /var/www/Sissalden/protected/views/actividades/_view.php(4): CActiveRecord->__get('Array')
+#2 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, false)
+#4 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sissal...', Array)
+#5 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#9 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/Sissalden/protected/views/actividades/index.php(25): CBaseController->widget('bootstrap.widge...', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/Sissalden/protected/controllers/ActividadesController.php(133): CController->render('index', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): ActividadesController->actionIndex()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/ind...')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sissalden/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/index
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/admin
+---
+2013/06/04 09:37:55 [error] [exception.CException] exception 'CException' with message 'Propiedad "Actividades"."Array" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('Array')
+#1 /var/www/Sissalden/protected/controllers/ActividadesController.php(73): CActiveRecord->__get('Array')
+#2 /var/www/yii/framework/web/actions/CInlineAction.php(49): ActividadesController->actionCreate()
+#3 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/cre...')
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Sissalden/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/create
+---
+2013/06/04 09:38:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "adin" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('adin')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('adin')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/adi...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sissalden/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/adin
+---
+2013/06/04 09:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "adim" solicitada.' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('adim')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('adim')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('actividades/adi...')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Sissalden/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Sissalden/index.php?r=actividades/adim
+---
+2013/06/04 09:59:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subactividades/index"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('subactividades/...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=subactividades/index
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/create
+---
+2013/06/04 09:59:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "subactividades/index"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('subactividades/...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=subactividades/index
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=actividades/create
+---
+2013/06/04 10:29:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'La solicitud de la página no existe.' in /var/www/Sissalden/protected/controllers/ParroquiaController.php:150
+Stack trace:
+#0 /var/www/Sissalden/protected/controllers/ParroquiaController.php(62): ParroquiaController->loadModel('2', '4')
+#1 [internal function]: ParroquiaController->actionView('2', '4')
+#2 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ParroquiaController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ParroquiaController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('parroquia/view')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sissalden/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sissalden/index.php?r=parroquia/view&id_parroquia=4&id_circuito=2
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=parroquia/index
+---
+2013/06/04 10:29:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('parroquia/view')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sissalden/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sissalden/index.php?r=parroquia/view&id%5Bid_circuito%5D=2&id%5Bid_parroquia%5D=4
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=parroquia/admin
+---
+2013/06/04 10:29:40 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('parroquia/updat...')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sissalden/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sissalden/index.php?r=parroquia/update&id%5Bid_circuito%5D=2&id%5Bid_parroquia%5D=4
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=parroquia/admin
+---
+2013/06/04 10:55:15 [error] [exception.CException] exception 'CException' with message 'Propiedad "Actividades"."nb_actividad" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('nb_actividad')
+#1 /var/www/Sissalden/protected/views/subActividades/_view.php(4): CActiveRecord->__get('nb_actividad')
+#2 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, false)
+#4 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sissal...', Array)
+#5 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#9 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/Sissalden/protected/views/subActividades/index.php(26): CBaseController->widget('bootstrap.widge...', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/Sissalden/protected/controllers/SubActividadesController.php(133): CController->render('index', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): SubActividadesController->actionIndex()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('subActividades/...')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sissalden/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sissalden/index.php?r=subActividades/index
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=subActividades/create
+---
+2013/06/04 11:45:11 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(2,3) no está presente en la tabla «parroquia».. La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sissalden/protected/controllers/AsicController.php (81)
+in /var/www/Sissalden/protected/controllers/AsicController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/04 11:45:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(2,3) no está presente en la tabla «parroquia».. The SQL statement executed was: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/AsicController.php(81): CActiveRecord->save()
+#3 /var/www/Sissalden/protected/controllers/AsicController.php(72): AsicController->saveModel(Object(Asic))
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/create')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 11:45:11 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(2,3) no está presente en la tabla «parroquia».. La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sissalden/protected/controllers/AsicController.php (81)
+in /var/www/Sissalden/protected/controllers/AsicController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/04 11:45:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(2,3) no está presente en la tabla «parroquia».. The SQL statement executed was: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/AsicController.php(81): CActiveRecord->save()
+#3 /var/www/Sissalden/protected/controllers/AsicController.php(72): AsicController->saveModel(Object(Asic))
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/create')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 11:47:20 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(4,3) no está presente en la tabla «parroquia».. La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sissalden/protected/controllers/AsicController.php (82)
+in /var/www/Sissalden/protected/controllers/AsicController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/04 11:47:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(4,3) no está presente en la tabla «parroquia».. The SQL statement executed was: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/AsicController.php(82): CActiveRecord->save()
+#3 /var/www/Sissalden/protected/controllers/AsicController.php(72): AsicController->saveModel(Object(Asic))
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/create')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 11:47:20 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(4,3) no está presente en la tabla «parroquia».. La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3).
+in /var/www/Sissalden/protected/controllers/AsicController.php (82)
+in /var/www/Sissalden/protected/controllers/AsicController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/04 11:47:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «asic» viola la llave foránea «asic_id_parroquia_fkey»
+DETAIL:  La llave (id_parroquia,id_circuito)=(4,3) no está presente en la tabla «parroquia».. The SQL statement executed was: INSERT INTO "sissalden"."asic" ("id_circuito", "id_parroquia", "nb_asic", "nb_bd_usuario") VALUES (:yp0, :yp1, :yp2, :yp3)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/AsicController.php(82): CActiveRecord->save()
+#3 /var/www/Sissalden/protected/controllers/AsicController.php(72): AsicController->saveModel(Object(Asic))
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/create')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 11:50:50 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «EL Recreo»
+LINE 1: ...*) FROM "sissalden"."asic" "t" WHERE id_parroquia='EL Recreo...
+                                                             ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."asic" "t" WHERE id_parroquia=:ycp0.
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/asic/admin.php (60)
+in /var/www/Sissalden/protected/controllers/AsicController.php (151)
+2013/06/04 11:50:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «EL Recreo»
+LINE 1: ...*) FROM "sissalden"."asic" "t" WHERE id_parroquia='EL Recreo...
+                                                             ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."asic" "t" WHERE id_parroquia=:ycp0' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#8 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 /var/www/Sissalden/protected/views/asic/admin.php(60): CBaseController->widget('bootstrap.widge...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#16 /var/www/Sissalden/protected/controllers/AsicController.php(151): CController->render('admin', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionAdmin()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/admin')
+#28 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#29 /var/www/Sissalden/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic%2Fadmin&Asic%5Bid_circuito%5D=&Asic%5Bid_parroquia%5D=EL+Recreo&Asic%5Bnb_asic%5D=&Asic_page=1&ajax=asic-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/admin
+---
+2013/06/04 11:51:02 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «EL Recreo»
+LINE 1: ...WHERE (nb_asic LIKE '%Prueba%') AND (id_parroquia='EL Recreo...
+                                                             ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."asic" "t" WHERE (nb_asic LIKE :ycp0) AND (id_parroquia=:ycp1).
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/asic/admin.php (60)
+in /var/www/Sissalden/protected/controllers/AsicController.php (151)
+2013/06/04 11:51:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «EL Recreo»
+LINE 1: ...WHERE (nb_asic LIKE '%Prueba%') AND (id_parroquia='EL Recreo...
+                                                             ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."asic" "t" WHERE (nb_asic LIKE :ycp0) AND (id_parroquia=:ycp1)' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#8 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 /var/www/Sissalden/protected/views/asic/admin.php(60): CBaseController->widget('bootstrap.widge...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#16 /var/www/Sissalden/protected/controllers/AsicController.php(151): CController->render('admin', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionAdmin()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/admin')
+#28 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#29 /var/www/Sissalden/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic%2Fadmin&Asic%5Bid_circuito%5D=&Asic%5Bid_parroquia%5D=EL+Recreo&Asic%5Bnb_asic%5D=Prueba&Asic_page=1&ajax=asic-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/admin
+---
+2013/06/04 11:51:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/view')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sissalden/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/view&id%5Bid_asic%5D=10&id%5Bid_parroquia%5D=2&id%5Bnb_bd_usuario%5D=bpalacios&id%5Bid_circuito%5D=2
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/admin
+---
+2013/06/04 11:51:29 [error] [exception.CException] exception 'CException' with message '"name" o "value" deben especificarse para CDataColumn.' in /var/www/yii/framework/zii/widgets/grid/CDataColumn.php:78
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridView.php(376): CDataColumn->init()
+#1 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(122): CGridView->initColumns()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(334): TbGridView->initColumns()
+#3 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#4 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#5 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#6 /var/www/Sissalden/protected/views/asic/admin.php(60): CBaseController->widget('bootstrap.widge...', Array)
+#7 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#8 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#10 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#11 /var/www/Sissalden/protected/controllers/AsicController.php(151): CController->render('admin', Array)
+#12 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionAdmin()
+#13 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#22 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/admin')
+#23 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#24 /var/www/Sissalden/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/admin
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/index
+---
+2013/06/04 11:52:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Su solicitud es inválida.' in /var/www/yii/framework/web/CController.php:336
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/view')
+#10 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#11 /var/www/Sissalden/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/view&id_asic=10&id_circuito=2&id_parroquia=2
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/index
+---
+2013/06/04 11:54:54 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «Circuito»
+LINE 1: ...(*) FROM "sissalden"."asic" "t" WHERE id_circuito='Circuito'
+                                                             ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."asic" "t" WHERE id_circuito=:ycp0.
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/asic/admin.php (60)
+in /var/www/Sissalden/protected/controllers/AsicController.php (151)
+2013/06/04 11:54:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «Circuito»
+LINE 1: ...(*) FROM "sissalden"."asic" "t" WHERE id_circuito='Circuito'
+                                                             ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."asic" "t" WHERE id_circuito=:ycp0' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#8 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 /var/www/Sissalden/protected/views/asic/admin.php(60): CBaseController->widget('bootstrap.widge...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#16 /var/www/Sissalden/protected/controllers/AsicController.php(151): CController->render('admin', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionAdmin()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/admin')
+#28 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#29 /var/www/Sissalden/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic%2Fadmin&Asic%5Bid_circuito%5D=Circuito&Asic%5Bid_parroquia%5D=&Asic%5Bnb_asic%5D=&Asic_page=1&ajax=asic-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/admin
+---
+2013/06/04 11:58:38 [error] [php] Undefined variable: from (/var/www/Sissalden/protected/views/asic/_form.php:10)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): AsicController->renderFile()
+#1 /var/www/Sissalden/protected/views/asic/create.php(23): AsicController->renderPartial()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): AsicController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): AsicController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): AsicController->renderPartial()
+#6 /var/www/Sissalden/protected/controllers/AsicController.php(77): AsicController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): AsicController->runAction()
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AsicController->filterAccessControl()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): AsicController->runActionWithFilters()
+#16 /var/www/yii/framework/web/CWebApplication.php(282): AsicController->run()
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+in /var/www/Sissalden/protected/views/asic/_form.php (10)
+in /var/www/Sissalden/protected/views/asic/create.php (23)
+in /var/www/Sissalden/protected/controllers/AsicController.php (77)
+2013/06/04 11:59:31 [error] [exception.CException] exception 'CException' with message 'TbActiveForm y sus behaviors no tienen un método o closure llamado "textFiel".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/Sissalden/protected/views/asic/_form.php(10): CComponent->__call('textFiel', Array)
+#1 /var/www/Sissalden/protected/views/asic/_form.php(10): TbActiveForm->textFiel(Object(Asic), 'id_circuito')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#5 /var/www/Sissalden/protected/views/asic/create.php(23): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sissalden/protected/controllers/AsicController.php(77): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/create')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sissalden/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:42:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:42:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:42:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:45:51 [error] [php] Object of class CDbCriteria could not be converted to string (/var/www/Sissalden/protected/views/asic/_form.php:15)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): AsicController->renderFile()
+#1 /var/www/Sissalden/protected/views/asic/create.php(23): AsicController->renderPartial()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): AsicController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): AsicController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): AsicController->renderPartial()
+#6 /var/www/Sissalden/protected/controllers/AsicController.php(77): AsicController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): AsicController->runAction()
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): AsicController->filterAccessControl()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): AsicController->runActionWithFilters()
+#16 /var/www/yii/framework/web/CWebApplication.php(282): AsicController->run()
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+in /var/www/Sissalden/protected/views/asic/_form.php (15)
+in /var/www/Sissalden/protected/views/asic/create.php (23)
+in /var/www/Sissalden/protected/controllers/AsicController.php (77)
+2013/06/04 14:46:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:46:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:47:30 [error] [exception.CException] exception 'CException' with message 'Propiedad "Asic"."id_crcuito" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('id_crcuito')
+#1 /var/www/yii/framework/web/helpers/CHtml.php(2255): CActiveRecord->__get('id_crcuito')
+#2 /var/www/yii/framework/web/helpers/CHtml.php(1565): CHtml::resolveValue(Object(Asic), 'id_crcuito')
+#3 /var/www/yii/framework/web/widgets/CActiveForm.php(763): CHtml::activeDropDownList(Object(Asic), 'id_crcuito', Array, Array)
+#4 /var/www/Sissalden/protected/views/asic/_form.php(25): CActiveForm->dropDownList(Object(Asic), 'id_crcuito', Array, Array)
+#5 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#6 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#8 /var/www/Sissalden/protected/views/asic/create.php(23): CController->renderPartial('_form', Array)
+#9 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#10 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#11 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#12 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#13 /var/www/Sissalden/protected/controllers/AsicController.php(77): CController->render('create', Array)
+#14 /var/www/yii/framework/web/actions/CInlineAction.php(49): AsicController->actionCreate()
+#15 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#24 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('asic/create')
+#25 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#26 /var/www/Sissalden/index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:47:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:47:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:47:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:55:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:55:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:55:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:56:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:59:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 14:59:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:00:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarorganismos"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarorganismos
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:03:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:04:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:07:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:07:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:08:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:08:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:09:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:10:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:10:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:10:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:11:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:13:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:14:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:14:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:17:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:17:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:23:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:24:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---
+2013/06/04 15:25:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('circuito/admin')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Sissalden/index.php?r=circuito/admin
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=circuito
+---
+2013/06/04 15:27:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "Correspondencia/cargarparroquia"' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Correspondencia...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Sissalden/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Sissalden/index.php?r=Correspondencia/cargarparroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=asic/create
+---

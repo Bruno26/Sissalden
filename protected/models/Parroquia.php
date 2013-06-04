@@ -85,7 +85,7 @@ class Parroquia extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 		$criteria->compare('id_parroquia',$this->id_parroquia);
-		$criteria->compare('nb_parroquia',$this->nb_parroquia);
+		$criteria->compare('nb_parroquia',$this->nb_parroquia,true);
 		$criteria->compare('id_circuito',$this->id_circuito);
 		$criteria-> with = array('circuito');
 		$criteria->compare('circuito.nb_circuido', $this->id_circuito);

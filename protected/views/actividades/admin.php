@@ -43,14 +43,14 @@ $('.search-form form').submit(function(){
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'actividades-grid',
 	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+	//'filter'=>$model,
 	'columns'=>array(
-		'id_actividades',
+		//'id_actividades',
 		'nb_actividades',
-		'id_registro',
-		'nb_bd_usuario',
-		array(
-			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
+		//'id_registro',
+		//'nb_bd_usuario',
+		/*/array(
+			'class'=>'bootstrap.widgets.TbButtonColumn',// busqueda - modificacion - editar
+		),*/
 	),
 )); ?>

@@ -38,7 +38,7 @@ class Actividades extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('nb_actividades, nb_bd_usuario', 'required'),
-			array('nb_actividades, nb_bd_usuario', 'length', 'max'=>50),
+			array('nb_actividades, nb_bd_usuario', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id_actividades, nb_actividades, id_registro, nb_bd_usuario', 'safe', 'on'=>'search'),
@@ -53,6 +53,8 @@ class Actividades extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'usuario_login'=>array(self::BELONGS_TO, 'Usuario', 'nb_bd_usuario'),
+			
 		);
 	}
 
@@ -63,7 +65,7 @@ class Actividades extends CActiveRecord
 	{
 		return array(
 			'id_actividades' => 'Id Actividades',
-			'nb_actividades' => 'Nb Actividades',
+			'nb_actividades' => 'Tipo de Acta',
 			'id_registro' => 'Id Registro',
 			'nb_bd_usuario' => 'Nb Bd Usuario',
 		);
@@ -84,6 +86,8 @@ class Actividades extends CActiveRecord
 		$criteria->compare('nb_actividades',$this->nb_actividades,true);
 		$criteria->compare('id_registro',$this->id_registro);
 		$criteria->compare('nb_bd_usuario',$this->nb_bd_usuario,true);
+		$criteria-> with= ('usuario_login');
+		$criteria->addSearchCondition('usuario_login.nb_actividades', $this->id_actividades);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

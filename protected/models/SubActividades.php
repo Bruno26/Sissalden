@@ -38,7 +38,7 @@ class SubActividades extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_actividades, nb_bd_usuario', 'required'),
+			array('id_actividades,nb_sub_actividades, nb_bd_usuario', 'required'),
 			array('id_actividades', 'numerical', 'integerOnly'=>true),
 			array('nb_sub_actividades, nb_bd_usuario', 'length', 'max'=>50),
 			// The following rule is used by search().
@@ -55,6 +55,8 @@ class SubActividades extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'tipo_acta'=>array(self::BELONGS_TO, 'Actividades', 'id_actividades'),
+	
 		);
 	}
 
@@ -65,9 +67,9 @@ class SubActividades extends CActiveRecord
 	{
 		return array(
 			'id_sub_actividades' => 'Id Sub Actividades',
-			'nb_sub_actividades' => 'Nb Sub Actividades',
+			'nb_sub_actividades' => 'Actividades',
 			'id_registro' => 'Id Registro',
-			'id_actividades' => 'Id Actividades',
+			'id_actividades' => 'Tipo de Acta',
 			'nb_bd_usuario' => 'Nb Bd Usuario',
 		);
 	}

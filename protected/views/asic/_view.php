@@ -11,7 +11,8 @@
 	
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('nb_asic')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->nb_asic ),array('view','id_asic'=>$data->id_asic , 'id_circuito'=>$data->id_circuito, 'id_parroquia'=>$data->id_parroquia)); ?>
+	<?php echo CHtml::encode($data->nb_asic )
+	/*,array('view','id_asic'=>$data->id_asic , 'id_circuito'=>$data->id_circuito, 'id_parroquia'=>$data->id_parroquia)*///Envia por url los id para la consulta ; ?>
 	<br />
 
 	<?php //echo CHtml::encode($data->getAttributeLabel('id_registro')); ?>

@@ -68,11 +68,11 @@ class ConsultorioPromotores extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_consul_popular' => 'Id Consul Popular',
-			'id_asic' => 'Id Asic',
-			'id_parroquia' => 'Id Parroquia',
-			'id_circuito' => 'Id Circuito',
-			'id_promotor' => 'Id Promotor',
+			'id_consul_popular' => 'Consultorio Popular',
+			'id_asic' => 'Asic',
+			'id_parroquia' => 'Parroquia',
+			'id_circuito' => 'Circuito',
+			'id_promotor' => 'Promotor',
 		);
 	}
 

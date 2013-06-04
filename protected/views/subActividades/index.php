@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Sub Actividades',
+	'Actividades',
 );
 /*
 $this->menu=array(
@@ -11,13 +11,14 @@ $this->menu=array(
 $this->widget('bootstrap.widgets.TbTabs', array(
 	'type' => 'tabs',
 	'tabs' => array(
-			array('label'=>'Crear','url'=>array('create')),
-			array('label'=>'Consultar SubActividades','url'=>array('admin')),
+			array('label'=>'Registrar Actividad','url'=>array('create')),
+			array('label'=>'Listar Tipos de Actas','url'=>array('actividades/index')),
+			//array('label'=>'Consultar SubActividades','url'=>array('admin')),
 			))
 	);
 ?>
 
-<h1>Sub Actividades</h1>
+<h1>Actividades</h1>
 
 <?php $this->widget('bootstrap.widgets.TbListView',array(
 	'dataProvider'=>$dataProvider,

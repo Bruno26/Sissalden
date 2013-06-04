@@ -34,6 +34,10 @@ class AsicController extends Controller
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
 			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('cargarparroquia'),
+				'users'=>array('@'),
+			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
 				'users'=>array('@'),
@@ -70,7 +74,8 @@ class AsicController extends Controller
 			if($model->validate())
 			{
 				$this->saveModel($model);
-				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_circuito'=>$model->id_circuito, 'id_asic'=>$model->id_asic));
+				//$this->redirect(array('index'));
+				echo $model;
 			}
 		}
 		$this->render('create',array('model'=>$model));
@@ -169,10 +174,27 @@ class AsicController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='asic-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='index')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionCargarparroquia()
+	{
+		$data=Parroquia::model()->findAllBySql(
+				"select * from parroquia where id_circuito 
+				=:keyword or id_parroquia=0 order by id_parroquia=0 desc, nb_parroquia asc",
+				// Aquí buscamos los diferentes organismos que pertenecen al tipo elegido
+				array(':keyword'=>$_POST['Correspondencia']['id_circuito'])
+			);
+		$data=CHtml::listData($data,'id_parroquia','nb_parroquia');
+		foreach($data as $value=>$name)
+			{
+				echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
+			}
+	}
+
+	
 }

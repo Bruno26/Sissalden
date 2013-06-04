@@ -70,7 +70,7 @@ class SubActividadesController extends Controller
 		{
 			$model->attributes=$_POST['SubActividades'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_sub_actividades));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(

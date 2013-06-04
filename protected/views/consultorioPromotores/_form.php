@@ -6,11 +6,11 @@
 
 	<p class="help-block">Campos con <span class="required">*</span> son requiridos.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php //echo $form->errorSummary($model); ?><br><br>
 
 	<?php echo $form->dropDownListRow($model,'id_circuito' ,CHtml::listData(Circuito::model()->findAll(), 'id_circuito', 'nb_circuito')); ?>
 
-	<?php echo $form->dropDownListRow($model,'id_circuito' ,CHtml::listData(Parroquia::model()->findAll(), 'id_parroquia', 'nb_parroquia')); ?>
+	<?php echo $form->dropDownListRow($model,'id_parroquia' ,CHtml::listData(Parroquia::model()->findAll(), 'id_parroquia', 'nb_parroquia')); ?>
 
 	<?php echo $form->dropDownListRow($model,'id_asic',CHtml::listData(Asic::model()->findAll(), 'id_asic', 'nb_asic')); ?>
 

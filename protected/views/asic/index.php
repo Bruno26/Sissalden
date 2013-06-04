@@ -1,7 +1,7 @@
 <?php
 
 $this->breadcrumbs=array(
-	'Asics',
+	'Asic',
 );
 /*
 $this->menu=array(

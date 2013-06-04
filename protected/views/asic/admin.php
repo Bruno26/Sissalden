@@ -53,8 +53,8 @@ $('.search-form form').submit(function(){
 		array ('name'=>'id_parroquia','value'=>'$data->parroquia->nb_parroquia','type'=>'text',),
 		//'nb_bd_usuario',
 		'nb_asic',
-		array(
+	/*	array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
-		),
+		),*/
 	),
 )); ?>
