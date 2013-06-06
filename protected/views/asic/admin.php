@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Asics'=>array('index'),
+	'Asic'=>array('index'),
 	'Consultar',
 );
 /*

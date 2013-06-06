@@ -156,9 +156,9 @@ class AsicController extends Controller
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id)
+	public function loadModel($id_parroquia, $id_circuito, $id_asic )//Tabla con clave primaria compuesta
 	{
-		$model=Asic::model()->findByPk($id);
+		$model=Asic::model()->findByPk(array('id_parroquia'=>$id_parroquia, 'id_circuito'=>$id_circuito, 'id_asic'=>$id_asic));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

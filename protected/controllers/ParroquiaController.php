@@ -145,7 +145,7 @@ class ParroquiaController extends Controller
 	 */
 	public function loadModel($id_circuito, $id_parroquia)
 	{
-		$model=Parroquia::model()->findByPk(array('id_parroquia'=>$id_circuito, 'id_circuito'=>$id_parroquia));
+		$model=Parroquia::model()->findByPk(array('id_parroquia'=>$id_parroquia, 'id_circuito'=>$id_circuito));
 		if($model===null)
 			throw new CHttpException( 404,'La solicitud de la página no existe.');
 		return $model;

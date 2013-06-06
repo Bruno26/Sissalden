@@ -57,7 +57,7 @@ class Asic extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'circuito'=> array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
+			'circuito' =>array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
 			'parroquia'=>array(self::BELONGS_TO, 'Parroquia', 'id_parroquia'),
 //			'consultorioPopular'=>array(self::HAS_MANY, 'ConsultorioPopular', 'id_circuito' and 'id_parrqouia' and 'id_asic'),				
 
@@ -93,18 +93,18 @@ class Asic extends CActiveRecord
 		$criteria->compare('id_asic',$this->id_asic);
 		$criteria->compare('nb_asic',$this->nb_asic,true);
 		$criteria->compare('id_registro',$this->id_registro);
-		$criteria->compare('id_parroquia',$this->id_parroquia);
+		//$criteria->compare('id_parroquia',$this->id_parroquia);
 		$criteria->compare('nb_bd_usuario',$this->nb_bd_usuario,true);
-		$criteria->compare('id_circuito',$this->id_circuito);
+		//$criteria->compare('id_circuito',$this->id_circuito);
 
 		
 
-/*		$criteria->with =array('circuito');
-		$criteria->addSearchCondition('circuito.nb_circuido', $this->id_circuito);
+		$criteria->with =array('circuito');
+		$criteria->addSearchCondition('circuito.nb_circuito', $this->id_circuito);
 
 		$criteria->with =array('parroquia');
 		$criteria->addSearchCondition('parroquia.nb_parroquia', $this->id_parroquia);
-*/
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

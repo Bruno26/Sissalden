@@ -53,7 +53,7 @@ class Circuito extends CActiveRecord
 		return array(
 			'parroquia'=>array(self::HAS_MANY, 'Parroquia', 'id_circuito'),
 			
-//'asic'=>array(self::HAST_MANY, 'Asic', 'id_parrqouia'),
+//		'asic'=>array(self::HAS_MANY, 'Asic', 'id_circuito'),
 		);
 	}
 
