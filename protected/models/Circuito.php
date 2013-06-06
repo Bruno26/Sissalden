@@ -51,7 +51,8 @@ class Circuito extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'parroquia'=>array(self::HAS_MANY, 'Parrqouia', 'id_circuito'),
+			'parroquia'=>array(self::HAS_MANY, 'Parroquia', 'id_circuito'),
+			
 //'asic'=>array(self::HAST_MANY, 'Asic', 'id_parrqouia'),
 		);
 	}

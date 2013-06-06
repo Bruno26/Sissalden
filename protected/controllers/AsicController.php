@@ -27,15 +27,11 @@ class AsicController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'selectParroquia'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('cargarparroquia'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -74,8 +70,8 @@ class AsicController extends Controller
 			if($model->validate())
 			{
 				$this->saveModel($model);
-				//$this->redirect(array('index'));
-				echo $model;
+				$this->redirect(array('index'));
+				
 			}
 		}
 		$this->render('create',array('model'=>$model));
@@ -181,20 +177,20 @@ class AsicController extends Controller
 		}
 	}
 	
-	public function actionCargarparroquia()
-	{
-		$data=Parroquia::model()->findAllBySql(
-				"select * from parroquia where id_circuito 
-				=:keyword or id_parroquia=0 order by id_parroquia=0 desc, nb_parroquia asc",
-				// Aquí buscamos los diferentes organismos que pertenecen al tipo elegido
-				array(':keyword'=>$_POST['Correspondencia']['id_circuito'])
-			);
-		$data=CHtml::listData($data,'id_parroquia','nb_parroquia');
-		foreach($data as $value=>$name)
-			{
-				echo CHtml::tag('option', array('value'=>$value),CHtml::encode($name),true);
-			}
-	}
-
+	public function actionSelectParroquia()//Se le otorga permiso de ejecucion en rules
+        {
+            $id_circuito = $_POST['Asic']['id_circuito'];
+            $lista = Parroquia::model()->findAll('id_circuito = :id_circuito',array(':id_circuito'=>$id_circuito));
+            $lista = CHtml::listData($lista,'id_parroquia','nb_parroquia');
+            
+            echo CHtml::tag('option', array('value' => ''), 'Seleccione una parroquia', true);
+            
+            foreach ($lista as $valor => $descripcion){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+                
+            }
+            
+        }
+	
 	
 }

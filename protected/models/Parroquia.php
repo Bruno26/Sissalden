@@ -59,6 +59,7 @@ class Parroquia extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'circuito' => array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
+			'asic'=> array (self::HAS_MANY, 'Asic', 'id_circuito' and 'id_parroquia'),
 		);
 	}
 
@@ -88,7 +89,7 @@ class Parroquia extends CActiveRecord
 		$criteria->compare('nb_parroquia',$this->nb_parroquia,true);
 		$criteria->compare('id_circuito',$this->id_circuito);
 		$criteria-> with = array('circuito');
-		$criteria->compare('circuito.nb_circuido', $this->id_circuito);
+		$criteria->compare('circuito.nb_circuido', $this->id_circuito);//codigo incompleto de busqeuda
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
