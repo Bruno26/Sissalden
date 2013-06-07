@@ -27,8 +27,8 @@ class ConsultorioPopularController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index','view', 'selectParroquia', 'selectasic'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -47,14 +47,21 @@ class ConsultorioPopularController extends Controller
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
-	 */
+	 
 	public function actionView($id)
 	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
+	*/
 
+	//Adaptacio de actioView con claves compuestas primaria
+	public function actionView($id_parroquia,$id_asic, $id_circuito,$id_consul_popular)//function ver clave compuesta
+	{
+		$model=$this->loadModel($id_parroquia,$id_asic, $id_circuito,$id_consul_popular);
+		$this->render('view',array('model'=>$model));
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -82,7 +89,7 @@ class ConsultorioPopularController extends Controller
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
-	 */
+	 
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
@@ -101,6 +108,20 @@ class ConsultorioPopularController extends Controller
 			'model'=>$model,
 		));
 	}
+	*/
+	public function actionUpdate($id_parroquia,$id_asic, $id_circuito,$id_consul_popular)
+	{
+		$model=$this->loadModel($id_parroquia,$id_asic, $id_circuito,$id_consul_popular);
+
+		if(isset($_POST['ConsultorioPopular']))
+			{
+				$model->attributes=$_POST['ConsultorioPopular'];
+				$this->saveModel($model);
+				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_circuito'=>$model->id_circuito, 'id_asic'=>$model->id_asic, 'id_consul_popular'=>$model->id_consul_popular));
+			}
+		$this->render('update',array('model'=>$model,));
+	}
+
 
 	/**
 	 * Deletes a particular model.
@@ -153,9 +174,9 @@ class ConsultorioPopularController extends Controller
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer the ID of the model to be loaded
 	 */
-	public function loadModel($id)
+	public function loadModel($id_parroquia,$id_asic, $id_circuito,$id_consul_popular)
 	{
-		$model=ConsultorioPopular::model()->findByPk($id);
+		$model=ConsultorioPopular::model()->findByPk(array('id_parroquia'=>$id_parroquia,'id_asic'=>$id_asic, 'id_circuito'=>$id_circuito,'id_consul_popular'=>$id_consul_popular));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -173,4 +194,35 @@ class ConsultorioPopularController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionSelectParroquia()//Se le otorga permiso de ejecucion en rules
+        {
+            $id_circuito = $_POST['ConsultorioPopular']['id_circuito'];
+            $lista = Parroquia::model()->findAll('id_circuito = :id_circuito',array(':id_circuito'=>$id_circuito));
+            $lista = CHtml::listData($lista,'id_parroquia','nb_parroquia');
+            
+            echo CHtml::tag('option', array('value' => ''), 'Seleccione una parroquia', true);
+            
+            foreach ($lista as $valor => $descripcion){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+                
+            }
+            
+        }
+
+
+	public function actionSelectasic()
+        {
+            $id_parroquia = $_POST['ConsultorioPopular']['id_parroquia'];
+            $lista = Asic::model()->findAll('id_parroquia = :id_parroquia',array(':id_parroquia'=>$id_parroquia));
+            $lista = CHtml::listData($lista,'id_asic','nb_asic');
+            
+            echo CHtml::tag('option', array('value' => ''), 'Seleccione un Asic', true);
+            
+            foreach ($lista as $valor => $descripcion){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+                
+            }
+            
+        }
 }

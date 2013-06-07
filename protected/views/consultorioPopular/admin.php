@@ -45,19 +45,20 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id_consul_popular',
-		'nb_consul_popular',
-		'dir_consu_popular',
-		'nb_comite_salud',
-		'telf_comite_salud',
-		'nb_coordi_comite_salud',
-		/*
-		'id_registro',
-		'id_asic',
-		'id_parroquia',
+		//'id_consul_popular',
 		'id_circuito',
-		'nb_bd_usuario',
-		*/
+		'id_parroquia',
+		'asic.nb_asic',
+		'nb_consul_popular',
+		//'dir_consu_popular',
+		'nb_comite_salud',
+		//'telf_comite_salud',
+		//'nb_coordi_comite_salud',
+		//'id_registro',
+
+
+		//'nb_bd_usuario',
+
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),

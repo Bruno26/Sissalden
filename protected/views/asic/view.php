@@ -34,6 +34,6 @@ $this->widget('bootstrap.widgets.TbTabs', array(
 		'id_registro',
 		'id_parroquia',
 		'nb_bd_usuario',
-		'id_circuito',
+		'circuito.nb_circuito',
 	),
 )); ?>

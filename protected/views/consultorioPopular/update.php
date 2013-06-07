@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Consultorio Populars'=>array('index'),
-	$model->id_consul_popular=>array('view','id'=>$model->Array),
+	$model->nb_consul_popular=>array('view','id_parroquia'=>$model->id_circuito, 'id_circuito'=>$model->id_circuito, 'id_asic'=>$model->id_asic, 'id_consul_popular'=>$model->id_consul_popular),
 	'Modificar',
 );
 /*
@@ -17,11 +17,11 @@ $this->widget('bootstrap.widgets.TbTabs', array(
 	'tabs' => array(
 			array('label'=>'Listar','url'=>array('index')),
 			array('label'=>'Registrar','url'=>array('create')),
-			array('label'=>'Ver','url'=>array('view','id'=>$model->Array)),
+			array('label'=>'Ver','url'=>array('view','id_parroquia'=>$model->id_circuito, 'id_circuito'=>$model->id_circuito, 'id_asic'=>$model->id_asic, 'id_consul_popular'=>$model->id_consul_popular)),
 			array('label'=>'Consultar','url'=>array('admin')),			))
 	);
 ?>
 
-<h1>Modificar ConsultorioPopular <?php echo $model->Array; ?></h1>
+<h1>Modificar  <?php echo $model->nb_consul_popular; ?></h1>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

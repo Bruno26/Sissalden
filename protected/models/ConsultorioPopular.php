@@ -44,7 +44,7 @@ class ConsultorioPopular extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nb_consul_popular, dir_consu_popular, nb_comite_salud, telf_comite_salud, nb_coordi_comite_salud, id_asic, id_parroquia, id_circuito, nb_bd_usuario', 'required'),
+			array('nb_consul_popular, dir_consu_popular, nb_comite_salud, nb_coordi_comite_salud, id_asic, id_parroquia, id_circuito, nb_bd_usuario,telf_comite_salud', 'required'),
 			array('id_asic, id_parroquia, id_circuito', 'numerical', 'integerOnly'=>true),
 			array('nb_consul_popular', 'length', 'max'=>80),
 			array('nb_comite_salud, nb_coordi_comite_salud, nb_bd_usuario', 'length', 'max'=>50),
@@ -62,6 +62,9 @@ class ConsultorioPopular extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'circuito'=>array(self::BELONGS_TO, 'Circuito', 'id_circuito'),		
+			'parroquia'=>array(self::BELONGS_TO, 'Parroquia', 'id_parroquia'),					
+			'asic'=>array(self::BELONGS_TO, 'Asic', 'id_asic'),						
 		);
 	}
 
@@ -72,15 +75,15 @@ class ConsultorioPopular extends CActiveRecord
 	{
 		return array(
 			'id_consul_popular' => 'Id Consul Popular',
-			'nb_consul_popular' => 'Nb Consul Popular',
-			'dir_consu_popular' => 'Dir Consu Popular',
-			'nb_comite_salud' => 'Nb Comite Salud',
-			'telf_comite_salud' => 'Telf Comite Salud',
-			'nb_coordi_comite_salud' => 'Nb Coordi Comite Salud',
+			'nb_consul_popular' => 'Consultorio Popular',
+			'dir_consu_popular' => 'Dirección del Consultorio',
+			'nb_comite_salud' => 'Comite Salud',
+			'telf_comite_salud' => 'Telf del Comite',
+			'nb_coordi_comite_salud' => 'Coord Comite Salud',
 			'id_registro' => 'Id Registro',
-			'id_asic' => 'Id Asic',
-			'id_parroquia' => 'Id Parroquia',
-			'id_circuito' => 'Id Circuito',
+			'id_asic' => 'Asic',
+			'id_parroquia' => 'Parroquia',
+			'id_circuito' => 'Circuito',
 			'nb_bd_usuario' => 'Nb Bd Usuario',
 		);
 	}

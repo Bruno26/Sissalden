@@ -98,7 +98,7 @@ class Asic extends CActiveRecord
 		//$criteria->compare('id_circuito',$this->id_circuito);
 
 		
-
+		//Falta por realizar busqueda por circuto admin.php 
 		$criteria->with =array('circuito');
 		$criteria->addSearchCondition('circuito.nb_circuito', $this->id_circuito);
 

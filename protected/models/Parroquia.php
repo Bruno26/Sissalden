@@ -59,7 +59,7 @@ class Parroquia extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'circuito' => array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
-//			'asic'=> array (self::HAS_MANY, 'Asic', 'id_circuito' and 'id_parroquia'),
+			//'asic'=> array (self::HAS_MANY, 'Asic', 'id_circuito' and 'id_parroquia'),
 		);
 	}
 
@@ -70,7 +70,7 @@ class Parroquia extends CActiveRecord
 	{
 		return array(
 			'id_parroquia' => 'Parroquia',
-			'nb_parroquia' => 'Nombre de Parroquia',
+			'nb_parroquia' => 'Parroquia',
 			'id_circuito' => 'Nombre del Circuito',
 		);
 	}

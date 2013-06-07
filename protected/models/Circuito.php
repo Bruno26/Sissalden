@@ -64,7 +64,7 @@ class Circuito extends CActiveRecord
 	{
 		return array(
 			'id_circuito' => 'Id Circuito',
-			'nb_circuito' => 'Nb Circuito',
+			'nb_circuito' => 'Circuito',
 		);
 	}
 
