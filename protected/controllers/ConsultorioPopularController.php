@@ -62,10 +62,10 @@ class ConsultorioPopularController extends Controller
 		$model=$this->loadModel($id_parroquia,$id_asic, $id_circuito,$id_consul_popular);
 		$this->render('view',array('model'=>$model));
 	}
-	/**
+	/** 
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
+	
 	public function actionCreate()
 	{
 		$model=new ConsultorioPopular;
@@ -84,6 +84,27 @@ class ConsultorioPopularController extends Controller
 			'model'=>$model,
 		));
 	}
+	Fin de la Function Create de YII*/
+
+	public function actionCreate()
+	{
+		
+		$model=new ConsultorioPopular;
+
+		if(isset($_POST['ConsultorioPopular']))
+		{
+			$model->attributes=$_POST['ConsultorioPopular'];
+			if($model->validate())
+			{
+				$this->saveModel($model);
+				$this->redirect(array('view','id_parroquia'=>$model->id_parroquia, 'id_circuito'=>$model->id_circuito, 'id_asic'=>$model->id_asic, 'id_consul_popular'=>$model->id_consul_popular));
+				
+			}
+			
+		}
+		$this->render('create',array('model'=>$model));
+	}
+
 
 	/**
 	 * Updates a particular model.
@@ -121,8 +142,7 @@ class ConsultorioPopularController extends Controller
 			}
 		$this->render('update',array('model'=>$model,));
 	}
-
-
+	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -169,6 +189,10 @@ class ConsultorioPopularController extends Controller
 		));
 	}
 
+	public function saveModel($model)
+	{
+		$model->save();
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

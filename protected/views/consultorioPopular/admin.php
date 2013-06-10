@@ -34,11 +34,7 @@ $('.search-form form').submit(function(){
 <h1>Consultar Consultorio Popular</h1>
 
 <?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
+
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'consultorio-popular-grid',
@@ -46,21 +42,19 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		//'id_consul_popular',
-		'id_circuito',
-		'id_parroquia',
-		'asic.nb_asic',
-		'nb_consul_popular',
+		array ('name'=>'id_circuito','value'=>'$data->circuito->nb_circuito','type'=>'text',),
+		array ('name'=>'id_parroquia','value'=>'$data->parroquia->nb_parroquia','type'=>'text',),
+		array ('name'=>'id_asic','value'=>'$data->asic->nb_asic','type'=>'text',),
+		'nb_consul_popular',			
 		//'dir_consu_popular',
 		'nb_comite_salud',
 		//'telf_comite_salud',
 		//'nb_coordi_comite_salud',
 		//'id_registro',
-
-
 		//'nb_bd_usuario',
-
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),
 	),
-)); ?>
+)); 
+?>

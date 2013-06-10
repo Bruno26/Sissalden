@@ -59,7 +59,7 @@ class Asic extends CActiveRecord
 		return array(
 			'circuito' =>array(self::BELONGS_TO, 'Circuito', 'id_circuito'),
 			'parroquia'=>array(self::BELONGS_TO, 'Parroquia', 'id_parroquia'),
-//			'consultorioPopular'=>array(self::HAS_MANY, 'ConsultorioPopular', 'id_circuito' and 'id_parrqouia' and 'id_asic'),				
+			'consultorioPopular'=>array(self::HAS_MANY, 'ConsultorioPopular', 'id_asic'),				
 
 		);
 	}
@@ -105,6 +105,7 @@ class Asic extends CActiveRecord
 		$criteria->with =array('parroquia');
 		$criteria->addSearchCondition('parroquia.nb_parroquia', $this->id_parroquia);
 
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

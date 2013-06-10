@@ -62,9 +62,9 @@ class ConsultorioPopular extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'circuito'=>array(self::BELONGS_TO, 'Circuito', 'id_circuito'),		
+			'circuito' =>array(self::BELONGS_TO, 'Circuito', 'id_circuito'),		
 			'parroquia'=>array(self::BELONGS_TO, 'Parroquia', 'id_parroquia'),					
-			'asic'=>array(self::BELONGS_TO, 'Asic', 'id_asic'),						
+			'asic'     =>array(self::BELONGS_TO, 'Asic', 'id_asic'),						
 		);
 	}
 
@@ -75,7 +75,7 @@ class ConsultorioPopular extends CActiveRecord
 	{
 		return array(
 			'id_consul_popular' => 'Id Consul Popular',
-			'nb_consul_popular' => 'Consultorio Popular',
+			'nb_consul_popular' => 'Consultorio',
 			'dir_consu_popular' => 'Dirección del Consultorio',
 			'nb_comite_salud' => 'Comite Salud',
 			'telf_comite_salud' => 'Telf del Comite',
@@ -107,10 +107,16 @@ class ConsultorioPopular extends CActiveRecord
 		$criteria->compare('nb_coordi_comite_salud',$this->nb_coordi_comite_salud,true);
 		$criteria->compare('id_registro',$this->id_registro);
 		$criteria->compare('id_asic',$this->id_asic);
-		$criteria->compare('id_parroquia',$this->id_parroquia);
-		$criteria->compare('id_circuito',$this->id_circuito);
+		//$criteria->compare('id_parroquia',$this->id_parroquia);
+		//$criteria->compare('id_circuito',$this->id_circuito);
 		$criteria->compare('nb_bd_usuario',$this->nb_bd_usuario,true);
 
+		$criteria->with = array('circuito');
+		$criteria->addSearchCondition('circuito.nb_circuito', $this->id_circuito);
+			
+		/*$criteria->with =array ('asic');
+		$criteria->addSearchCondition('asic.id_asic', $this->id_asic);
+		*/
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

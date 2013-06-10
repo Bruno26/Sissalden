@@ -77,7 +77,7 @@
                 $lista_tres = CHtml::listData(Asic::model()->findAll("id_parroquia = '$id_parroquia'"),'id_asic','nb_asic');
                 }
                 echo $form->dropDownList($model,'id_asic',$lista_tres,
-                        array('prompt'=>'Seleccione')
+                        array('prompt'=>'Seleccione un asic')
                         ); ?><br>
 
 		<?php echo $form->error($model,'id_asic'); ?>
