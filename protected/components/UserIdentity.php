@@ -52,7 +52,7 @@ class UserIdentity extends CUserIdentity
 			/*Consultamos los datos del usuario por el username ($user->username) */
 			$info_usuario = Usuario::model()->find('LOWER(nb_bd_usuario)=?', array($user->nb_bd_usuario));
 			/*En las vistas tendremos disponibles last_login y perfil pueden setear las que requieran */
-			$this->setState('last_login',$info_usuario->last_login);
+			//$this->setState('last_login',$info_usuario->last_login);
 			$this->setState('in_tipo_usuario',$info_usuario->in_tipo_usuario);
 			 
 			/*Actualizamos el last_login del usuario que se esta autenticando ($user->username) */

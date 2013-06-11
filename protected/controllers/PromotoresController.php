@@ -15,6 +15,7 @@ class PromotoresController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
+
 		);
 	}
 
@@ -31,12 +32,12 @@ class PromotoresController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=> array('@'),
-//				'expression' => "Yii::app()->user->Usuario.in_tipo_usuario == 'A'",
+				'actions'=>array('create','update','delete'),
+				//'users'=> array('@'),
+				'expression' => "Yii::app()->user->in_tipo_usuario == 'C'",
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users

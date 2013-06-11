@@ -105,7 +105,7 @@
                 $lista_cuatro = array();
                 if(isset($model->id_consul_popular)){
                 $id_asic = intval($model->id_asic); 
-                $lista_cuatro = CHtml::listData(Asic::model()->findAll("id_asic = '$id_asic'"),'id_consul_popular','nb_cunsul_popular');
+                $lista_cuatro = CHtml::listData(ConsultorioPopular::model()->findAll("id_asic = '$id_asic'"),'id_consul_popular','nb_cunsul_popular');
                 }
                 echo $form->dropDownList($model,'id_consul_popular',$lista_cuatro,
                         array('prompt'=>'Seleccione Consultorio')
@@ -113,7 +113,7 @@
 
 		<?php echo $form->error($model,'id_consul_popular'); ?>
 		</div>		
-	</div> <!-- Fin de combo asic-->
+	</div> <!-- Fin de combo consultorio-->
 
 
 	<?php echo $form->dropDownListRow($model,'id_promotor',CHtml::listData(Promotores::model()->findAll(), 'id_promotor', 'nb_promotor')); ?>
