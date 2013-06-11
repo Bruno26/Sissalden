@@ -27,7 +27,7 @@ class ConsultorioPromotoresController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'selectParroquia', 'selectasic','selectConsultorio'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -173,4 +173,49 @@ class ConsultorioPromotoresController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionSelectParroquia()//Se le otorga permiso de ejecucion en rules
+        {
+            $id_circuito = $_POST['ConsultorioPromotores']['id_circuito'];
+            $lista = Parroquia::model()->findAll('id_circuito = :id_circuito',array(':id_circuito'=>$id_circuito));
+            $lista = CHtml::listData($lista,'id_parroquia','nb_parroquia');
+            
+            echo CHtml::tag('option', array('value' => ''), 'Seleccione una parroquia', true);
+            
+            foreach ($lista as $valor => $descripcion){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+                
+            }
+            
+        }
+
+	public function actionSelectasic()
+        {
+            $id_parroquia = $_POST['ConsultorioPromotores']['id_parroquia'];
+            $lista = Asic::model()->findAll('id_parroquia = :id_parroquia',array(':id_parroquia'=>$id_parroquia));
+            $lista = CHtml::listData($lista,'id_asic','nb_asic');
+            
+            echo CHtml::tag('option', array('value' => ''), 'Seleccione un Asic', true);
+            
+            foreach ($lista as $valor => $descripcion){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+                
+            }
+            
+        }
+
+	public function actionSelectConsultorio()
+        {
+            $id_asic = $_POST['ConsultorioPromotores']['id_asic'];
+            $lista = ConsultorioPopular::model()->findAll('id_asic = :id_asic',array(':id_asic'=>$id_asic));
+            $lista = CHtml::listData($lista,'id_consul_popular','nb_consul_popular');
+            
+            echo CHtml::tag('option', array('value' => ''), 'Seleccione un Consultorio', true);
+            
+            foreach ($lista as $valor => $descripcion){
+                echo CHtml::tag('option',array('value'=>$valor),CHtml::encode($descripcion), true );
+                
+            }
+            
+        }
 }

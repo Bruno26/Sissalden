@@ -4404,3 +4404,1190 @@ Stack trace:
 REQUEST_URI=/Sissalden/index.php?r=consultorioPopular/view&id%5Bid_consul_popular%5D=37&id%5Bid_asic%5D=25&id%5Bid_parroquia%5D=4&id%5Bid_circuito%5D=2
 HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPopular/admin
 ---
+2013/06/11 09:05:08 [error] [php] Trying to get property of non-object (/var/www/yii/framework/base/CComponent.php(606) : eval()'d code:1)
+Stack trace:
+#0 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): TbDataColumn->renderDataCellContent()
+#1 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): TbDataColumn->renderDataCell()
+#2 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): TbGridView->renderTableRow()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): TbGridView->renderTableBody()
+#4 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): TbGridView->renderItems()
+#5 unknown(0): TbGridView->renderSection()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): TbGridView->renderContent()
+#8 /var/www/yii/framework/web/CBaseController.php(173): TbGridView->run()
+#9 /var/www/Sissalden/protected/views/consultorioPopular/admin.php(59): ConsultorioPopularController->widget()
+#10 /var/www/yii/framework/web/CBaseController.php(126): require()
+#11 /var/www/yii/framework/web/CBaseController.php(95): ConsultorioPopularController->renderInternal()
+#12 /var/www/yii/framework/web/CController.php(869): ConsultorioPopularController->renderFile()
+#13 /var/www/yii/framework/web/CController.php(782): ConsultorioPopularController->renderPartial()
+#14 /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php(189): ConsultorioPopularController->render()
+#15 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPopularController->actionAdmin()
+#16 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#18 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#20 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#22 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#24 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#25 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#26 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#27 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=consultorioPopular/admin
+in /var/www/Sissalden/protected/views/consultorioPopular/admin.php (59)
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (189)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:05:34 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42702]: Ambiguous column: 7 ERROR:  la referencia a la columna «id_asic» es ambigua
+LINE 1: ...sic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic='p...
+                                                             ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."consultorio_popular" "t"  LEFT OUTER JOIN "sissalden"."asic" "asic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic=:ycp0) AND (asic.nb_asic LIKE :ycp1)).
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/consultorioPopular/admin.php (59)
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (189)
+2013/06/11 09:05:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42702]: Ambiguous column: 7 ERROR:  la referencia a la columna «id_asic» es ambigua
+LINE 1: ...sic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic='p...
+                                                             ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."consultorio_popular" "t"  LEFT OUTER JOIN "sissalden"."asic" "asic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic=:ycp0) AND (asic.nb_asic LIKE :ycp1))' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveFinder.php(718): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/db/ar/CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(1550): CActiveFinder->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#10 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#11 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#12 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 /var/www/Sissalden/protected/views/consultorioPopular/admin.php(59): CBaseController->widget('bootstrap.widge...', Array)
+#14 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#15 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#16 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#18 /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php(189): CController->render('admin', Array)
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPopularController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#27 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#29 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioPopu...')
+#30 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#31 /var/www/Sissalden/index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPopular%2Fadmin&ConsultorioPopular%5Bid_circuito%5D=&ConsultorioPopular%5Bid_parroquia%5D=&ConsultorioPopular%5Bid_asic%5D=p&ConsultorioPopular%5Bnb_consul_popular%5D=&ConsultorioPopular%5Bnb_comite_salud%5D=&ConsultorioPopular_page=1&ajax=consultorio-popular-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPopular/admin
+---
+2013/06/11 09:05:41 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[42702]: Ambiguous column: 7 ERROR:  la referencia a la columna «id_asic» es ambigua
+LINE 1: ...sic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic='a...
+                                                             ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."consultorio_popular" "t"  LEFT OUTER JOIN "sissalden"."asic" "asic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic=:ycp0) AND (asic.nb_asic LIKE :ycp1)).
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/consultorioPopular/admin.php (59)
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (189)
+2013/06/11 09:05:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42702]: Ambiguous column: 7 ERROR:  la referencia a la columna «id_asic» es ambigua
+LINE 1: ...sic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic='a...
+                                                             ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."consultorio_popular" "t"  LEFT OUTER JOIN "sissalden"."asic" "asic" ON ("t"."id_asic"="asic"."id_asic")  WHERE ((id_asic=:ycp0) AND (asic.nb_asic LIKE :ycp1))' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveFinder.php(718): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/db/ar/CActiveFinder.php(151): CJoinElement->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(1550): CActiveFinder->count(Object(CDbCriteria))
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#6 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#10 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#11 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#12 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#13 /var/www/Sissalden/protected/views/consultorioPopular/admin.php(59): CBaseController->widget('bootstrap.widge...', Array)
+#14 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#15 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#16 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#18 /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php(189): CController->render('admin', Array)
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPopularController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#27 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#29 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioPopu...')
+#30 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#31 /var/www/Sissalden/index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPopular%2Fadmin&ConsultorioPopular%5Bid_circuito%5D=&ConsultorioPopular%5Bid_parroquia%5D=&ConsultorioPopular%5Bid_asic%5D=a&ConsultorioPopular%5Bnb_consul_popular%5D=&ConsultorioPopular%5Bnb_comite_salud%5D=&ConsultorioPopular_page=1&ajax=consultorio-popular-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPopular/admin
+---
+2013/06/11 09:31:36 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:33:13 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:33:15 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:33:17 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:33:21 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:33:24 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:47:33 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:47:34 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPopularController.php:224)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPopularController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPopularController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPopularController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPopularController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPopular/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPopularController.php (224)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:49:44 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:179)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (179)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:50:48 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:179)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (179)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:51:17 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:179)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (179)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:53:39 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:179)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (179)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:53:42 [error] [php] Undefined index: ConsultorioPopular (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:179)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (179)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:54:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (195)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:54:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. The SQL statement executed was: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(195): CActiveRecord->findAll('id_parroquia = ...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectasic()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectasic')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/Selectasic
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 09:54:52 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «consultorio_promotores» viola la llave foránea «consultorio_promotores_id_consul_popular_fkey»
+DETAIL:  La llave (id_consul_popular,id_asic,id_parroquia,id_circuito)=(31,12,2,2) no está presente en la tabla «consultorio_popular».. La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 09:54:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23503]: Foreign key violation: 7 ERROR:  inserción o actualización en la tabla «consultorio_promotores» viola la llave foránea «consultorio_promotores_id_consul_popular_fkey»
+DETAIL:  La llave (id_consul_popular,id_asic,id_parroquia,id_circuito)=(31,12,2,2) no está presente en la tabla «consultorio_popular».. The SQL statement executed was: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sissalden/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:33:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (195)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:33:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. The SQL statement executed was: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(195): CActiveRecord->findAll('id_parroquia = ...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectasic()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectasic')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/Selectasic
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:33:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (195)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:33:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. The SQL statement executed was: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(195): CActiveRecord->findAll('id_parroquia = ...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectasic()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectasic')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/Selectasic
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:37:35 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:37:41 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:37:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (195)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:37:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. The SQL statement executed was: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(195): CActiveRecord->findAll('id_parroquia = ...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectasic()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectasic')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/Selectasic
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:37:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: ...CT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = ''
+                                                                     ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = :id_circuito.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (180)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:37:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: ...CT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = ''
+                                                                     ^. The SQL statement executed was: SELECT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = :id_circuito' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(180): CActiveRecord->findAll('id_circuito = :...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectParroquia()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('SelectParroquia')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:37:52 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:37:56 [error] [exception.CException] exception 'CException' with message 'Propiedad "ConsultorioPromotores"."xid_parroquia" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('xid_parroquia')
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/_form.php(76): CActiveRecord->__get('xid_parroquia')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#5 /var/www/Sissalden/protected/views/consultorioPromotores/create.php(23): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(78): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sissalden/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:38:06 [error] [exception.CException] exception 'CException' with message 'Propiedad "ConsultorioPromotores"."xid_parroquia" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('xid_parroquia')
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/_form.php(76): CActiveRecord->__get('xid_parroquia')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#5 /var/www/Sissalden/protected/views/consultorioPromotores/create.php(23): CController->renderPartial('_form', Array)
+#6 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#7 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#8 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#9 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#10 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(78): CController->render('create', Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Sissalden/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:38:42 [error] [php] include(ASic.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/Sissalden/protected/views/consultorioPromotores/_form.php(77): spl_autoload_call()
+#1 /var/www/yii/framework/web/CBaseController.php(126): require()
+#2 /var/www/yii/framework/web/CBaseController.php(95): ConsultorioPromotoresController->renderInternal()
+#3 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#4 /var/www/Sissalden/protected/views/consultorioPromotores/create.php(23): ConsultorioPromotoresController->renderPartial()
+#5 /var/www/yii/framework/web/CBaseController.php(126): require()
+#6 /var/www/yii/framework/web/CBaseController.php(95): ConsultorioPromotoresController->renderInternal()
+#7 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#8 /var/www/yii/framework/web/CController.php(782): ConsultorioPromotoresController->renderPartial()
+#9 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(78): ConsultorioPromotoresController->render()
+#10 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#11 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#13 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#16 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#18 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#19 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#20 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#22 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+in /var/www/Sissalden/protected/views/consultorioPromotores/_form.php (77)
+in /var/www/Sissalden/protected/views/consultorioPromotores/create.php (23)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (78)
+2013/06/11 10:38:55 [error] [php] Undefined variable: id_parroquia (/var/www/Sissalden/protected/views/consultorioPromotores/_form.php:77)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/create.php(23): ConsultorioPromotoresController->renderPartial()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ConsultorioPromotoresController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ConsultorioPromotoresController->renderPartial()
+#6 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(78): ConsultorioPromotoresController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#16 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+in /var/www/Sissalden/protected/views/consultorioPromotores/_form.php (77)
+in /var/www/Sissalden/protected/views/consultorioPromotores/create.php (23)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (78)
+2013/06/11 10:40:02 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:40:05 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:40:06 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:40:10 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:41:05 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:41:07 [error] [php] Undefined variable: id_asic (/var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:210)
+Stack trace:
+#0 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#1 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectConsultorio
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (210)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:45:10 [error] [php] Undefined variable: lista_tres (/var/www/Sissalden/protected/views/consultorioPromotores/_form.php:79)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/create.php(23): ConsultorioPromotoresController->renderPartial()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): ConsultorioPromotoresController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): ConsultorioPromotoresController->renderPartial()
+#6 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(78): ConsultorioPromotoresController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#16 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+in /var/www/Sissalden/protected/views/consultorioPromotores/_form.php (79)
+in /var/www/Sissalden/protected/views/consultorioPromotores/create.php (23)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (78)
+2013/06/11 10:46:55 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (195)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:46:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = ''
+                                                                  ^. The SQL statement executed was: SELECT * FROM "sissalden"."asic" "t" WHERE id_parroquia = :id_parroquia' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(195): CActiveRecord->findAll('id_parroquia = ...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectasic()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('Selectasic')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/Selectasic
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:46:57 [error] [system.db.CDbCommand] CDbCommand::fetchAll() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: ...CT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = ''
+                                                                     ^. La sentencia SQL ejecutada fue: SELECT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = :id_circuito.
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (180)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:46:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «»
+LINE 1: ...CT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = ''
+                                                                     ^. The SQL statement executed was: SELECT * FROM "sissalden"."parroquia" "t" WHERE id_circuito = :id_circuito' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/yii/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(180): CActiveRecord->findAll('id_circuito = :...', Array)
+#4 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionSelectParroquia()
+#5 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('SelectParroquia')
+#14 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('ConsultorioProm...')
+#15 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#16 /var/www/Sissalden/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/Sissalden/index.php?r=ConsultorioPromotores/SelectParroquia
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 10:50:21 [warning] [application] Error al definir unsafe el atributo "id_consultorio_promotorer" de "ConsultorioPromotores".
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (144)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:50:24 [warning] [application] Error al definir unsafe el atributo "id_consultorio_promotorer" de "ConsultorioPromotores".
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (144)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:53:54 [error] [exception.CException] exception 'CException' with message 'Propiedad "ConsultorioPromotores"."parroquia" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('parroquia')
+#1 /var/www/yii/framework/base/CComponent.php(606) : eval()'d code(1): CActiveRecord->__get('parroquia')
+#2 /var/www/yii/framework/base/CComponent.php(606): eval()
+#3 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(131): CComponent->evaluateExpression('$data->parroqui...', Array)
+#4 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent(0, Object(ConsultorioPromotores))
+#5 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CGridColumn->renderDataCell(0)
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow(0)
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#12 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#13 /var/www/Sissalden/protected/views/consultorioPromotores/admin.php(63): CBaseController->widget('bootstrap.widge...', Array)
+#14 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#15 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#16 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#17 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#18 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(148): CController->render('admin', Array)
+#19 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionAdmin()
+#20 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#21 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#22 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#23 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#27 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#29 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#30 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#31 /var/www/Sissalden/index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/admin
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/index
+---
+2013/06/11 10:54:34 [error] [php] include(Parrqouia.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(386): spl_autoload_call()
+#1 /var/www/yii/framework/db/ar/CActiveFinder.php(215): model()
+#2 /var/www/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#3 /var/www/yii/framework/db/ar/CActiveRecord.php(271): CActiveFinder->__construct()
+#4 /var/www/yii/framework/db/ar/CActiveRecord.php(141): ConsultorioPromotores->getRelated()
+#5 /var/www/yii/framework/base/CComponent.php(606) : eval()'d code(1): ConsultorioPromotores->__get()
+#6 /var/www/yii/framework/base/CComponent.php(606): eval()
+#7 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(131): TbDataColumn->evaluateExpression()
+#8 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): TbDataColumn->renderDataCellContent()
+#9 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): TbDataColumn->renderDataCell()
+#10 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): TbGridView->renderTableRow()
+#11 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): TbGridView->renderTableBody()
+#12 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): TbGridView->renderItems()
+#13 unknown(0): TbGridView->renderSection()
+#14 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#15 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): TbGridView->renderContent()
+#16 /var/www/yii/framework/web/CBaseController.php(173): TbGridView->run()
+#17 /var/www/Sissalden/protected/views/consultorioPromotores/admin.php(63): ConsultorioPromotoresController->widget()
+#18 /var/www/yii/framework/web/CBaseController.php(126): require()
+#19 /var/www/yii/framework/web/CBaseController.php(95): ConsultorioPromotoresController->renderInternal()
+#20 /var/www/yii/framework/web/CController.php(869): ConsultorioPromotoresController->renderFile()
+#21 /var/www/yii/framework/web/CController.php(782): ConsultorioPromotoresController->renderPartial()
+#22 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(148): ConsultorioPromotoresController->render()
+#23 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionAdmin()
+#24 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#25 /var/www/yii/framework/web/filters/CFilterChain.php(133): ConsultorioPromotoresController->runAction()
+#26 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#27 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#28 /var/www/yii/framework/web/filters/CInlineFilter.php(58): ConsultorioPromotoresController->filterAccessControl()
+#29 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#30 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#31 /var/www/yii/framework/web/CController.php(265): ConsultorioPromotoresController->runActionWithFilters()
+#32 /var/www/yii/framework/web/CWebApplication.php(282): ConsultorioPromotoresController->run()
+#33 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#34 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#35 /var/www/Sissalden/index.php(13): CWebApplication->run()
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/admin
+in /var/www/Sissalden/protected/views/consultorioPromotores/admin.php (63)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (148)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 10:57:51 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «b»
+LINE 1: ...issalden"."consultorio_promotores" "t" WHERE id_promotor='b'
+                                                                    ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."consultorio_promotores" "t" WHERE id_promotor=:ycp0.
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/consultorioPromotores/admin.php (64)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (148)
+2013/06/11 10:57:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «b»
+LINE 1: ...issalden"."consultorio_promotores" "t" WHERE id_promotor='b'
+                                                                    ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."consultorio_promotores" "t" WHERE id_promotor=:ycp0' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#8 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 /var/www/Sissalden/protected/views/consultorioPromotores/admin.php(64): CBaseController->widget('bootstrap.widge...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#16 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(148): CController->render('admin', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionAdmin()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#28 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#29 /var/www/Sissalden/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores%2Fadmin&ConsultorioPromotores%5Bid_circuito%5D=&ConsultorioPromotores%5Bid_parroquia%5D=&ConsultorioPromotores%5Bid_asic%5D=&ConsultorioPromotores%5Bid_consul_popular%5D=&ConsultorioPromotores%5Bid_promotor%5D=b&ConsultorioPromotores_page=1&ajax=consultorio-promotores-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/admin
+---
+2013/06/11 10:57:55 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «B»
+LINE 1: ...issalden"."consultorio_promotores" "t" WHERE id_promotor='B'
+                                                                    ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."consultorio_promotores" "t" WHERE id_promotor=:ycp0.
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/consultorioPromotores/admin.php (64)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (148)
+2013/06/11 10:57:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «B»
+LINE 1: ...issalden"."consultorio_promotores" "t" WHERE id_promotor='B'
+                                                                    ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."consultorio_promotores" "t" WHERE id_promotor=:ycp0' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#8 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 /var/www/Sissalden/protected/views/consultorioPromotores/admin.php(64): CBaseController->widget('bootstrap.widge...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#16 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(148): CController->render('admin', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionAdmin()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#28 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#29 /var/www/Sissalden/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores%2Fadmin&ConsultorioPromotores%5Bid_circuito%5D=&ConsultorioPromotores%5Bid_parroquia%5D=&ConsultorioPromotores%5Bid_asic%5D=&ConsultorioPromotores%5Bid_consul_popular%5D=&ConsultorioPromotores%5Bid_promotor%5D=B&ConsultorioPromotores_page=1&ajax=consultorio-promotores-grid
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/admin
+---
+2013/06/11 11:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php:160
+Stack trace:
+#0 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(54): ConsultorioPromotoresController->loadModel('9')
+#1 [internal function]: ConsultorioPromotoresController->actionView('9')
+#2 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ConsultorioPromotoresController), Array)
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ConsultorioPromotoresController), Object(ReflectionMethod), Array)
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sissalden/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/view&id=9
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/index
+---
+2013/06/11 11:02:56 [error] [exception.CException] exception 'CException' with message 'Propiedad "ConsultorioPromotores"."nb_consul_popular" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('nb_consul_popul...')
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/_view.php(8): CActiveRecord->__get('nb_consul_popul...')
+#2 /var/www/yii/framework/web/CBaseController.php(130): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, false)
+#4 /var/www/yii/framework/zii/widgets/CListView.php(281): CBaseController->renderFile('/var/www/Sissal...', Array)
+#5 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CBaseListView->renderContent()
+#9 /var/www/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /var/www/Sissalden/protected/views/consultorioPromotores/index.php(25): CBaseController->widget('bootstrap.widge...', Array)
+#11 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#12 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#13 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(133): CController->render('index', Array)
+#16 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionIndex()
+#17 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#27 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#28 /var/www/Sissalden/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/index
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/admin
+---
+2013/06/11 11:11:41 [error] [exception.CException] exception 'CException' with message 'Propiedad "ConsultorioPromotores"."nb_consultorio_promotorer" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('nb_consultorio_...')
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/view.php(27): CActiveRecord->__get('nb_consultorio_...')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(55): CController->render('view', Array)
+#7 [internal function]: ConsultorioPromotoresController->actionView('3')
+#8 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ConsultorioPromotoresController), Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ConsultorioPromotoresController), Object(ReflectionMethod), Array)
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/Sissalden/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/view&id=3
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/index
+---
+2013/06/11 11:13:42 [error] [exception.CException] exception 'CException' with message 'Propiedad "Promotores"."nb_promotorer" no se encuentra definida.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('nb_promotorer')
+#1 /var/www/Sissalden/protected/views/consultorioPromotores/view.php(27): CActiveRecord->__get('nb_promotorer')
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#5 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(55): CController->render('view', Array)
+#7 [internal function]: ConsultorioPromotoresController->actionView('3')
+#8 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ConsultorioPromotoresController), Array)
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ConsultorioPromotoresController), Object(ReflectionMethod), Array)
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/Sissalden/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/view&id=3
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/index
+---
+2013/06/11 11:25:44 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() falló: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «A»
+LINE 1: ...issalden"."consultorio_promotores" "t" WHERE id_promotor='A'
+                                                                    ^. La sentencia SQL ejecutada fue: SELECT COUNT(*) FROM "sissalden"."consultorio_promotores" "t" WHERE id_promotor=:ycp0.
+in /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php (66)
+in /var/www/Sissalden/protected/views/consultorioPromotores/admin.php (64)
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (148)
+2013/06/11 11:25:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  la sintaxis de entrada no es válida para integer: «A»
+LINE 1: ...issalden"."consultorio_promotores" "t" WHERE id_promotor='A'
+                                                                    ^. The SQL statement executed was: SELECT COUNT(*) FROM "sissalden"."consultorio_promotores" "t" WHERE id_promotor=:ycp0' in /var/www/yii/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/yii/framework/db/CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 /var/www/yii/framework/web/CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 /var/www/yii/framework/web/CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 /var/www/yii/framework/web/CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 /var/www/yii/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 /var/www/yii/framework/zii/widgets/CBaseListView.php(107): CDataProvider->getData()
+#7 /var/www/yii/framework/zii/widgets/grid/CGridView.php(314): CBaseListView->init()
+#8 /var/www/Sissalden/protected/extensions/bootstrap/widgets/TbGridView.php(66): CGridView->init()
+#9 /var/www/yii/framework/web/CBaseController.php(147): TbGridView->init()
+#10 /var/www/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('bootstrap.widge...', Array)
+#11 /var/www/Sissalden/protected/views/consultorioPromotores/admin.php(64): CBaseController->widget('bootstrap.widge...', Array)
+#12 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/Sissal...')
+#13 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Sissal...', Array, true)
+#14 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Sissal...', Array, true)
+#15 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#16 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(148): CController->render('admin', Array)
+#17 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionAdmin()
+#18 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#25 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#27 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#28 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#29 /var/www/Sissalden/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores%2Fadmin&ConsultorioPromotores_sort=id_promotor&ajax=consultorio-promotores-grid&ConsultorioPromotores%5Bid_circuito%5D=&ConsultorioPromotores%5Bid_parroquia%5D=&ConsultorioPromotores%5Bid_asic%5D=&ConsultorioPromotores%5Bid_consul_popular%5D=&ConsultorioPromotores%5Bid_promotor%5D=A&ConsultorioPromotores_page=1
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/admin
+---

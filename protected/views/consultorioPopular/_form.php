@@ -63,7 +63,7 @@
             
 		<?php echo $form->error($model,'id_parroquia'); ?>
 		</div>		
-	</div>
+	</div> <!-- Fin de combo parroquia-->
 
 	<?php //echo $form->textFieldRow($model,'id_asic',array('class'=>'span5')); ?>
 
@@ -82,7 +82,7 @@
 
 		<?php echo $form->error($model,'id_asic'); ?>
 		</div>		
-	</div>
+	</div> <!-- Fin de combo asic-->
 
 	<?php echo $form->textFieldRow($model,'nb_consul_popular',array('class'=>'span5','maxlength'=>80)); ?>
 

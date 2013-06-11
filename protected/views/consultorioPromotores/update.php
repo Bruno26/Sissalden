@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Consultorio Promotores'=>array('index'),
-	$model->id_consultorio_promotorer=>array('view','id'=>$model->id_consultorio_promotorer),
+	$model->promotores->nb_promotor=>array('view','id'=>$model->id_consultorio_promotorer),
 	'Modificar',
 );
 /*
@@ -23,6 +23,6 @@ $this->widget('bootstrap.widgets.TbTabs', array(
 	);
 ?>
 
-<h1>Modificar ConsultorioPromotores <?php echo $model->id_consultorio_promotorer; ?></h1>
+<h2>Modificar Consultorio ( <?php echo $model->promotores->nb_promotor;?>)</h2>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>

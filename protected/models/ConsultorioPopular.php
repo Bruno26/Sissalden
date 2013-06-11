@@ -112,11 +112,12 @@ class ConsultorioPopular extends CActiveRecord
 		$criteria->compare('nb_bd_usuario',$this->nb_bd_usuario,true);
 
 		$criteria->with = array('circuito');
-		$criteria->addSearchCondition('circuito.nb_circuito', $this->id_circuito);
-			
+		$criteria->addSearchCondition('circuito.nb_circuito', $this->id_circuito );
+		
 		/*$criteria->with =array ('asic');
 		$criteria->addSearchCondition('asic.id_asic', $this->id_asic);
 		*/
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
