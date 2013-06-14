@@ -92,7 +92,7 @@
 
 	<?php //echo $form->textFieldRow($model,'telf_comite_salud',array('class'=>'span5')); ?>
 
-	!<div class="control-group ">
+	<div class="control-group ">
 		<label class="control-label"><?php echo $form->labelEx($model,'telf_comite_salud'); ?></label>	
 		<div class="controls">	
 		<?php $this->widget('CMaskedTextField', array(

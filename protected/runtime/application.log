@@ -6147,3 +6147,129 @@ Stack trace:
 REQUEST_URI=/Sissalden/index.php?r=promotores/update&id=9
 HTTP_REFERER=http://localhost/Sissalden/index.php?r=promotores/admin
 ---
+2013/06/11 15:29:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('update')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('promotores/upda...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Sissalden/index.php?r=promotores/update&id=22
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=promotores/view&id=22
+---
+2013/06/11 15:29:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('promotores/crea...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Sissalden/index.php?r=promotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=promotores/view&id=9
+---
+2013/06/11 15:32:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Usted no se encuentra autorizado a realizar esta acción.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'Usted no se enc...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('promotores/crea...')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Sissalden/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/Sissalden/index.php?r=promotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=promotores/index
+---
+2013/06/11 16:01:59 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «consultorio_promotores_id_promotor_key». La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 16:01:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «consultorio_promotores_id_promotor_key». The SQL statement executed was: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sissalden/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 16:03:29 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «consultorio_promotores_id_promotor_key». La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 16:03:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «consultorio_promotores_id_promotor_key». The SQL statement executed was: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sissalden/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
+2013/06/11 16:20:49 [error] [system.db.CDbCommand] CDbCommand::execute() falló: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «consultorio_promotores_id_promotor_key». La sentencia SQL ejecutada fue: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php (72)
+in /var/www/Sissalden/index.php (13)
+2013/06/11 16:20:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[23505]: Unique violation: 7 ERROR:  llave duplicada viola restricción de unicidad «consultorio_promotores_id_promotor_key». The SQL statement executed was: INSERT INTO "sissalden"."consultorio_promotores" ("id_circuito", "id_parroquia", "id_asic", "id_consul_popular", "id_promotor") VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /var/www/yii/framework/db/CDbCommand.php:357
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(1023): CDbCommand->execute()
+#1 /var/www/yii/framework/db/ar/CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 /var/www/Sissalden/protected/controllers/ConsultorioPromotoresController.php(72): CActiveRecord->save()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): ConsultorioPromotoresController->actionCreate()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('consultorioProm...')
+#14 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Sissalden/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Sissalden/index.php?r=consultorioPromotores/create
+HTTP_REFERER=http://localhost/Sissalden/index.php?r=consultorioPromotores/create
+---
