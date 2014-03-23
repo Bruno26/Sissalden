@@ -72,7 +72,7 @@ return array(
 			'connectionString' => 'pgsql:host=localhost;dbname=sissalden',
 			'emulatePrepare' => true,
 			'username' => 'postgres',
-			'password' => '12345',
+			'password' => 'postgres',
 			'charset' => 'utf8',
 		),
 		
